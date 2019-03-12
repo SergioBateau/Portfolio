@@ -10,6 +10,36 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        section.first-section
+          .hero
+            .container.hero__container
+              header.header
+              .hero__content
+              .hero__scroll
+        section.second-section      
+          .about
+            .container
+              .about__col
+                .about__me
+                .about__text
+        section.third-section
+          +image('content/bg/arms.png','arms-pic')
+          .skills
+            .container
+              .skills__content
+              .skills__diagram
+        section.four-section
+          .my-work
+            .container
+              .my-work__col
+                .my-work__preview
+                .my-work__preview__content
+        section.five-section
+          +image('content/bg/leaves4.png','leaves4-pic')
+          .reviews
+            .container
+              .reviews__slider
+              .reviews__form    
+      footer.footer
+        
+          
