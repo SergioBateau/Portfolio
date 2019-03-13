@@ -14,13 +14,49 @@ html(lang="en")
           .hero
             .container.hero__container
               header.header
+                .header-logo
+                  a.header-logo__kink(href='#') СК
+                .header-menu
+                  ul.menu-list
+                    li.menu-item
+                      a.menu-link(href='#') Главная
+                    li.menu-item
+                      a.menu-link(href='#') Обо мне
+                    li.menu-item
+                      a.menu-link(href='#') Навыки
+                    li.menu-item
+                      a.menu-link(href='#') Работы
+                    li.menu-item
+                      a.menu-link(href='#') Отзывы
+                    li.menu-item
+                      a.menu-link(href='#') Связаться
+                .header-soc
+                  ul.soc-list
+                    li.soc-item
+                      a.soc-link(href='#')
+                        +icon('insta','soc-icon')
+                    li.soc-item
+                      a.soc-link(href='vk.com')
+                        +icon('vk','soc-icon')
+                    li.soc-item
+                      a.soc-link(href='github.com')
+                        +icon('github','soc-icon')
               .hero__content
+                .hero__content__col
+                  .hero__content__col-left 
+                    |Личный сайт 
+                    span веб разработчика
+                  .hero__content__col-right 
+                    |Сергей Кораблев
               .hero__scroll
+                a.scroll-link(href="#") Скролл
         section.second-section      
           .about
-            .container
+            .container.about__container
               .about__col
                 .about__me
+                  .about__me__photo
+                    +image('content/photo/photo.jpg','photo-pic')
                 .about__text
         section.third-section
           +image('content/bg/arms.png','arms-pic')
