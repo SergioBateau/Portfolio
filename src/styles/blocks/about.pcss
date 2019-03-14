@@ -9,19 +9,88 @@
     align-items: center;
 }
 .about__col {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .about__me {
-    background: red;
-    width: 300px;
-    height: 200px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
     margin-right: 150px;
+    align-items: center;
+}
+.about__me__photo {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.photo-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.about__me__table {
+    margin-top: 80px;
+    width: 100%;  
+}
+tr {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    td {
+        padding-bottom: 20px;
+    }
+    td.question {
+        opacity: .15;
+    }
+    td.answer {
+        opacity: 1;
+    }
 }
 .about__text {
-    background: blue;
-    width: 300px;
-    height: 200px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+.about__text__hello {
+    font-weight: 600;
+    font-size: 16px;
+    opacity: .5;
+    margin-bottom: 35px;
+}
+.about__text__name {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 45px;
+}
+.about__text__ido {
+    font-weight: 600;
+    font-size: 16px;
+    opacity: .5;
+    margin-bottom: 100px;
+}
+.about__text__quote {
+    position: relative;
+    font-family: 'Myriad Pro', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    opacity: .5;
+    &:before {
+        position: absolute;
+        left: -7%;
+        line-height: .9;
+        display: block;
+        content: '*';
+        font-size: 48px;
+        color: red;
+        font-weight: 300;
+        opacity: .3;
+    }
 }
