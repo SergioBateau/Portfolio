@@ -13,13 +13,7 @@ html(lang="en")
         section.first-section
           .hero
             .container.hero__container
-              header.header
-                .header-logo
-                  a.header-logo__kink(href='#') СК
-                .header-menu
-                  include ./sections/menu-list
-                .header-soc
-                  include ./sections/soc-list
+              include ./sections/header
               .hero__content
                 .hero__content__col
                   .hero__content__col-left 
@@ -59,9 +53,34 @@ html(lang="en")
         section.third-section
           +image('content/bg/arms.png','arms-pic')
           .skills
-            .container
+            .container.skills__container
               .skills__content
-              .skills__diagram
+                h2.title Чем я могу быть вам полезен
+                p.skills__content__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
+              .skills__user
+                ul.skills__list
+                  -
+                    var skills = [
+                      ['Frontend', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
+                      ['Workflow', ['Git', 'Terminal', 'Gulp','Webpack']],
+                    ]
+                  each item in skills
+                    li.skills__item.skills__row
+                      h3.skills__title #{item[0]}
+                      ul.diagram__list
+                        each skill in item[1]
+                          li.diagram__item
+                            .skill
+                              svg(viewBox='0 0 144 144' preserveAspectRatio='none').skill__shape
+                                circle(
+                                  r=67 cx='72' cy="72"
+                                ).skill__circle.skill__circle--under
+                                circle(r=67 cx='72' cy="72" ref="color-circle" stroke="url(#gradient)").skill__circle.skill__circle--above
+                                linear-gradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                                  stop(offset="0%" stop-color="#5500f2")
+                                  stop(offset="100%" stop-color="#8f00ef")
+                            .skill__title #{skill}
+
         section.four-section
           .my-work
             .container
@@ -71,34 +90,9 @@ html(lang="en")
         section.five-section
           +image('content/bg/leaves4.png','leaves4-pic')
           .reviews
-            .container
+            .container.reviews__container
               .reviews__slider
               .reviews__form    
-      footer.footer
-        .container
-          .footer__col
-            .footer__col__left
-              .col-left__year © 2019
-            .footer__col__middle
-              .col-middle__name Сергей Кораблев
-              .col-middle__content 
-                |Личный сайт 
-                span веб разработчика
-            .footer__col__right
-              .footer__menu
-                include ./sections/menu-list
-              .footer__desc
-                .footer__desc__col
-                  .footer__desc__col-left
-                    .desc__loftschool 
-                      |Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                    .desc__soc
-                      include ./sections/soc-list
-                  .footer__desc__col-right
-                    .desc__quote
-                      .desc__quote__text 
-                        |Всегда пишите код так, как будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
-                      .desc__quote__author
-                        |Martin Golding
+      include ./sections/footer
         
           
