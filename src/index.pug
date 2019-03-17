@@ -10,6 +10,165 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        section.first-section
+          .hero
+            .container.hero__container
+              include ./sections/header
+              .hero__content
+                .hero__content__col
+                  .hero__content__col-left 
+                    |Личный сайт 
+                    span веб разработчика
+                  .hero__content__col-right 
+                    |Сергей Кораблев
+              .hero__scroll
+                a.scroll-link(href="#") Скролл
+        section.second-section      
+          .about
+            .container.about__container
+              .about__col
+                .about__me
+                  .about__me__photo
+                    +image('content/photo/photo.jpg','photo-pic')
+                  table.about__me__table
+                    tr
+                      td.question Проживаю:
+                      td.answer Санкт-Петербург
+                    tr
+                      td.question Возраст:
+                      td.answer 33 года
+                    tr
+                      td.question Родился:
+                      td.answer 6 апреля 1985
+                .about__text
+                  .about__text__hello
+                    |Привет, меня зовут
+                  .about__text__name
+                    |Сергей Кораблев
+                  .about__text__ido
+                    |Я занимаюсь разработкой современных сайтов и приложений.
+                    |Мне нравится делать интересные и современные проекты.
+                  .about__text__quote
+                    |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        section.third-section
+          +image('content/bg/arms.png','arms-pic')
+          .skills
+            .container.skills__container
+              .skills__content
+                h2.title__content Чем я могу быть вам полезен
+                p.skills__content__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
+              .skills__user
+                ul.skills__list
+                  -
+                    var skills = [
+                      ['Frontend', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
+                      ['Workflow', ['Git', 'Terminal', 'Gulp','Webpack']],
+                    ]
+                  each item in skills
+                    li.skills__item.skills__row
+                      h3.skills__title #{item[0]}
+                      ul.diagram__list
+                        each skill in item[1]
+                          li.diagram__item
+                            .skill
+                              svg(viewBox='0 0 144 144' preserveAspectRatio='none').skill__shape
+                                circle(
+                                  r=67 cx='72' cy="72"
+                                ).skill__circle.skill__circle--under
+                                circle(r=67 cx='72' cy="72" ref="color-circle" stroke="url(#gradient)").skill__circle.skill__circle--above
+                                linear-gradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                                  stop(offset="0%" stop-color="#5500f2")
+                                  stop(offset="100%" stop-color="#8f00ef")
+                            .skill__title #{skill}
+        section.four-section
+          .my-work
+            .container.my-work__container
+              h2.title.my-work__title Мои работы
+              .my-work__col
+                .my-work__preview
+                  .my-work__preview__bg
+                    +image('content/bg/preview1.jpg','preview-bg')
+                    ul.previews__small__list
+                      li.previews__small__item
+                        +image('content/bg/preview_small_1.jpg', 'preview-bg__small')
+                      li.previews__small__item
+                        +image('content/bg/preview_small_2.jpg', 'preview-bg__small')
+                      li.previews__small__item
+                        +image('content/bg/preview_small_3.jpg', 'preview-bg__small')
+                      li.previews__small__item
+                        +image('content/bg/preview_small_4.jpg', 'preview-bg__small')
+                      li.preview__control__buttons
+                        button.previews__slider__button(type='button')
+                          +icon('arrow-down','arrow-down-icon')
+                        button.previews__slider__button(type='button')
+                          +icon('arrow-down','arrow-down-icon arro-down-icon__rotate')
+                  .my-work__preview__control 
+                    .preview__control__number 2
+                .my-work__content
+                  ul.my-work__content__list
+                    li.my-work__content__item HTML
+                    li.my-work__content__item CSS
+                    li.my-work__content__item Javascript
+                  .my-work__content__text
+                    h3.my-work__content__title Сайт школы образования
+                    p.my-work__content__desc Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.my-work__content__link(href='#')
+                    +icon('link','link-icon')
+                    |Посмотреть сайт  
+        section.five-section
+          +image('content/bg/leaves4.png','leaves4-pic')
+          .reviews
+            .container.reviews__container
+              .reviews__content
+                .reviews__title
+                  h2.title Что обо мне говорят
+                  .reviews__slider--buttons
+                    button.circle__button(type='button')
+                      +icon('arrow-down','arrow-down-icon arro-down-icon__rotate')
+                    button.circle__button(type='button')
+                      +icon('arrow-down','arrow-down-icon') 
+                .reviews__slider
+                  ul.reviews__slider-list
+                    li.reviews__slider-item
+                      .reviews__slider-item__text
+                        |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool!
+                        |4,5 месяца только самых тяжелых испытаний и бессоных ночей!
+                      .reviews__slider-item__user
+                        .reviews__user-photo
+                          +image('content/photo/KD.png','photo-pic1')
+                        .reviews__user-data
+                          .reviews__user-data__name Ковальчук Дмитрий                 
+                          .reviews__user-data__post Основатель Loftschool                
+                    li.reviews__slider-item
+                      .reviews__slider-item__text
+                        |Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                      .reviews__slider-item__user
+                        .reviews__user-photo
+                          +image('content/photo/SV.png','photo-pic1')
+                        .reviews__user-data
+                          .reviews__user-data__name Владимир Сабанцев                
+                          .reviews__user-data__post Преподаватель                
+              .reviews__form
+                h2.title Связаться со мной
+                .reviews__form__content
+                  .reviews__form__row
+                    label.reviews__form__block
+                      .reviews__form__block__name Введите ваше имя
+                      .reviews__form_block__field
+                        +icon('user','form-icon')
+                        input.form__block__input(type="text" id='name' name='name' placeholder='Ковальчук Дмитрий')
+                    label.reviews__form__block
+                      .reviews__form__block__name Введите ваш email
+                      .reviews__form_block__field
+                        +icon('envelope','form-icon')
+                        input.form__block__input(type="email" id='email' name='email' placeholder='loftschool@study.com')
+                  .reviews__form__row
+                    label.reviews__form__block
+                      .reviews__form__block__name Сообщение к письму
+                      .reviews__form_block__field
+                        +icon('message','form-icon')
+                        textarea.form__block__input(type="text", id='comment', name='comment', placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
+                button.send-button(type='button') Отправить
+      include ./sections/footer
+        
+          
