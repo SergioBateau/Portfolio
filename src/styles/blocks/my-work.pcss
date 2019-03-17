@@ -1,0 +1,111 @@
+.my-work {
+    width: 100%;
+    display: flex;
+}
+.my-work__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.my-work__title {
+    color: black;
+    margin-top: 210px;
+}
+.my-work__col {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+}
+.my-work__preview {
+    display: flex;
+    width: 70%;
+}
+.my-work__preview__bg {
+    position: relative;
+    z-index: 5;
+}
+.previews__small__list {
+    position: absolute;
+    display: flex;
+    right: -50px;
+    z-index: 10;
+    bottom: 10%;
+}
+.preview-bg__small {
+    width: 183px;
+    height: 103px;
+}
+.previews__small__item {
+    cursor: pointer;
+    &:first-child {
+        border: 3px solid #f29400;
+    }
+}
+.my-work__preview__control {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+}
+.preview__control__number {
+    font-weight: 800;
+    font-size: 400px;
+    color: #f0f0f0;
+    line-height: 1;
+    position: absolute;
+    left: -60px;
+    top: 30px;
+}
+.preview__control__buttons {
+    display: flex;
+    flex-direction: column;
+
+}
+.my-work__content {
+    display: flex;
+    flex-direction: column;
+    color: #2b3948;
+    margin-left: 12%;
+    width: 25%;
+}
+.my-work__content__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 50px;
+    .my-work__content__item {
+        margin-right: 20px;
+        cursor: pointer;
+        background: #f1f5f9;
+        padding: 10px 15px;
+        border-radius: 15px;
+        font-size: 15px;
+        opacity: .7;
+        &:hover {
+            background: #f29400;
+            color: white;
+            opacity: 1;
+        }
+    
+    }
+}
+.link-icon {
+    width: 18px;
+    fill: #4b6fd7;
+    margin-right: 20px;
+}
+.my-work__content__link {
+    color: #4b6fd7;
+    font-weight: 700;
+    font-size: 18px;
+}
+.my-work__content__desc {
+    opacity: .7;
+    margin-bottom: 50px;
+}
+.my-work__content__title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 55px;
+}
