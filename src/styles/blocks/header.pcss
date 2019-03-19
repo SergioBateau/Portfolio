@@ -3,7 +3,9 @@
     width: 100%;
     justify-content: space-between;
     flex-flow: row nowrap;
+    align-items: center;
     margin-top: 50px;
+    position: relative;
 }
 .header-logo {
     font-size: 36px;
@@ -15,4 +17,11 @@
 
 .header-soc {
     display: flex;
+    @include tablets {
+        position: absolute;
+        right: 95px;
+    }
+    @include phones {
+        display: none;
+    }
 }

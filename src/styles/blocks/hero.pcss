@@ -1,6 +1,5 @@
 .hero {
   width: 100%;
-  max-height: 100vh;
   display: flex;
 }
 .hero__container {
@@ -8,33 +7,71 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @include tablets {
+    justify-content: flex-start;
+  }
 }
 .hero__content {
   display: flex;
+  margin-top: 50px;
+  border: 1px solid red;
+  @include tablets {
+    margin-top: 350px;
+  }
+
 }
 .hero__content__col {
   display: flex;
   justify-content: center;
+  border: 1px solid blue;
+  padding: 0 150px 0 50px;
+    @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    
+  }
 }
 .hero__content__col-left {
-  width: 20%;
+  width: 28%;
   text-align: right;
   margin-right: 60px;
   font-size: 18px;
   opacity: .4;
-  line-height: 1.3;
+  line-height: 1.9;
+  border: 1px solid green;
+  @include tablets {
+    text-align: center;
+    width: 35%;
+    margin-right: 0;
+    font-size: 16px;
+  }
+  @include phones {
+    font-size: 14px;
+  }
 }
 .hero__content__col-right {
-  width: 50%;
+  width: 60%;
   text-align: left;
   font-size: 72px;
   font-weight: 800;
   line-height: 1;
+  border: 1px solid green;
+  @include tablets {
+    margin-top: 40px;
+    font-size: 48px;
+  }
+  @include phones {
+    font-size: 36px;
+  }
 }
 
 .hero__scroll {
   display: flex;
   align-items: center;
+  @include tablets {
+    display: none;
+  }
 }
 .scroll-link {
   display: flex;

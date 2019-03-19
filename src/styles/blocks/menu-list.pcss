@@ -5,6 +5,12 @@
 }
 .menu-item {
     margin-right: 60px;
+    @include desktop {
+        margin-right: 30px;
+    }
+    @include tablets {
+        display: none;
+    }
     &:last-child {
         margin-right: 0;
     }

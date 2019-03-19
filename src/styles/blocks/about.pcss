@@ -1,30 +1,37 @@
 .about {
     width: 100%;
-    min-height: 100%;
     display: flex;
+    align-items: center;
 }
 .about__container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -110px;
 }
 .about__col {
-    width: 100%;
+    /* width: 100%; */
+    padding: 0 17%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
+    border: 1px solid green;
 }
 .about__me {
-    width: 30%;
+    width: 100%;
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
-    align-items: center;
+    /* margin-right: 155px; */
+    align-items: flex-end;
+        @include desktop {
+        width: 30%;
+        margin-right: 20px;
+    }
 }
 .about__me__photo {
     display: inline-block;
+    border: 1px solid blue;
     width: 200px;
     height: 200px;
     overflow: hidden;
@@ -35,10 +42,14 @@
     border-radius: 50%;
 }
 .about__me__table {
+    border: 1px solid blue;
     margin-top: 70px;
     width: 100%;  
+    display: flex;
+    justify-content: flex-end;
 }
-tr {
+tr { 
+    
     td {
         padding-bottom: 15px;
     }
@@ -50,7 +61,12 @@ tr {
     }
 }
 .about__text {
-    width: 40%;
+    width: 100%;
+    margin-left: 155px;
+    border: 1px solid red;
+    @include desktop {
+        width: 50%;
+    }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
