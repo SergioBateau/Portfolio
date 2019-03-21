@@ -6,13 +6,15 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        section.first-section.fullscreen-section
-          .hero
+        section.first-section
+          include ./sections/parallax
+          .hero.fullscreen-section
             .container.hero__container
               include ./sections/header
               .hero__content
@@ -24,6 +26,7 @@ html(lang="en")
                     |Сергей Кораблев
               .hero__scroll
                 a.scroll-link(href="#") Скролл
+          //- .empty
         section.second-section      
           .about
             .container.about__container
