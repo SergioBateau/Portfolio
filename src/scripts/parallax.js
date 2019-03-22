@@ -18,7 +18,5 @@ if (windowWidth > 768) {
 window.addEventListener('scroll', e => {
     const wScroll = window.pageYOffset;
     moveLayersDependsOnScroll(wScroll);
-    console.log(wScroll);
-    
 });
 }

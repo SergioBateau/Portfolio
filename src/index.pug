@@ -6,13 +6,12 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        section.first-section
+        section#hero.first-section
           include ./sections/parallax
           .hero.fullscreen-section
             .container.hero__container
@@ -27,7 +26,7 @@ html(lang="en")
               .hero__scroll
                 a.scroll-link(href="#") Скролл
           //- .empty
-        section.second-section      
+        section#about.second-section      
           .about
             .container.about__container
               .about__col
@@ -54,7 +53,7 @@ html(lang="en")
                     |Мне нравится делать интересные и современные проекты.
                   .about__text__quote
                     |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section.third-section
+        section#skills.third-section
           +image('content/bg/arms.png','arms-pic')
           .skills
             .container.skills__container
@@ -84,7 +83,7 @@ html(lang="en")
                                   stop(offset="0%" stop-color="#5500f2")
                                   stop(offset="100%" stop-color="#8f00ef")
                             .skill__title #{skill}
-        section.four-section
+        section#my-work.four-section
           .my-work
             .container.my-work__container
               h2.title.my-work__title Мои работы
@@ -119,7 +118,7 @@ html(lang="en")
                   a.my-work__content__link(href='#')
                     +icon('link','link-icon')
                     |Посмотреть сайт  
-        section.five-section
+        section#reviews.five-section
           +image('content/bg/leaves4.png','leaves4-pic')
           .reviews
             .container.reviews__container
@@ -174,5 +173,5 @@ html(lang="en")
                         textarea.form__block__input(type="text", id='comment', name='comment', placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
                 button.send-button(type='button') Отправить
       include ./sections/footer
-        
+    include ./sections/hamburger-menu
           

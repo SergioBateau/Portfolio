@@ -6,6 +6,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
@@ -114,6 +115,7 @@ module.exports = (env, argv) => {
       hints: false
     },
     plugins: [
+      new FaviconsWebpackPlugin(path.resolve(__dirname, "src/images/Favicon.png")),
       new HtmlWebpackPlugin({
         template: "src/index.pug",
         chunks: ["main"]
