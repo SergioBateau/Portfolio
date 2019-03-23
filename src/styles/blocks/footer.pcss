@@ -2,45 +2,81 @@ footer {
     min-height: 370PX;
     background: #1b1f22;
     display: flex;
+    @include tablets {
+        min-height: 480PX;
+    }
+    @include phones {
+        min-height: 740PX;
+    }
 }
 .footer__col {
     height: 100%;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: flex-start;
     margin-top: 80px;
+    @include phones {
+        flex-direction: column;
+        justify-content: flex-start;
+            margin-top: 20px;
+    }
 }
 .footer__col__left {
-    width: 12%;
+    /* border: 1px solid red; */
+    width: 35%;
     display: flex;
-    margin-right: 50px;
+    @include desktop {
+        flex-direction: column;
+        width: 25%;
+        margin-right: 20px;
+    }
+    @include phones {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
-.footer__col__middle {
-    width: 10%;
+.col__data {
+    /* border: 1px solid green; */
+    width: 30%;
     display: flex;
     flex-flow: column nowrap;
-    margin-right: 130px;
+    @include desktop {
+        width: 80%;
+    }
+    @include phones {
+        width: 100%;
+    }
 }
 .footer__col__right {
+    /* border: 1px solid red; */
     width: 65%;
     display: flex;
     flex-flow: column nowrap;
+    @include  desktop {
+        width: 75%;
+    }
 }
-.col-left__year {
+.col__year {
+    /* border: 1px solid green; */
     font-size: 48px;
     font-weight: 600;
     opacity: 0.1;
+    margin-right: 60px;
+    @include desktop {
+        margin-bottom: 20px;
+        width: 100%;
+    }
 }
-.col-middle__name {
+.col-data__name {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.7;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-.col-middle__content {
+.col-data__content {
     font-weight: 400;
     opacity: .15;
     line-height: 2;
@@ -49,29 +85,58 @@ footer {
     display: flex;
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 55px;
+    @include tablets {
+        margin-bottom: 0;
+    }
+    .menu-list {
+        flex-flow: row wrap;
+        align-items: flex-start;
+    
+        .menu-item {
+            height: 40px;
+            width: 70px;
+            &:nth-child(odd){
+                margin-bottom: 20px;
+            }
+            @include tablets {
+                display: flex;
+            }
+        } 
+    }
 }
 .footer__desc {
     display: flex;
     width: 100%;
     font-weight: 400;
     line-height: 1.8;
+
 }
 .footer__desc__col {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 .footer__desc__col-left {
     display: flex;
     width: 50%;
     flex-flow: column nowrap;
     margin-right: 5%;
+    @include tablets {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
 .footer__desc__col-right {
     display: flex;
     width: 50%;
     flex-flow: column nowrap;
+    @include tablets {
+        width: 100%;
+    }
 }
 .desc__quote__author {
     font-style: italic;
