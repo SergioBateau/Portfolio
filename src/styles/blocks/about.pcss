@@ -9,29 +9,37 @@
     align-items: center;
 }
 .about__col {
-    /* width: 100%; */
-    padding: 0 17%;
+    width: 100%;
+    padding: 0 10% 0 10%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    border: 1px solid green;
+    @include desktop {
+        padding: 0;
+    }
+    @include phones {
+        flex-flow: column nowrap;
+    }
 }
 .about__me {
-    width: 100%;
-    border: 1px solid red;
+    width: 36%;
     display: flex;
     flex-direction: column;
-    /* margin-right: 155px; */
-    align-items: flex-end;
-        @include desktop {
-        width: 30%;
-        margin-right: 20px;
+    align-items: center;
+    @include desktop {
+        width: 36%;
     }
+    @include tablets {
+        width: 46%;
+    }
+    @include phones {
+        width: 100%;
+    }
+
 }
 .about__me__photo {
     display: inline-block;
-    border: 1px solid blue;
     width: 200px;
     height: 200px;
     overflow: hidden;
@@ -42,11 +50,17 @@
     border-radius: 50%;
 }
 .about__me__table {
-    border: 1px solid blue;
     margin-top: 70px;
-    width: 100%;  
-    display: flex;
-    justify-content: flex-end;
+    width: 100%;
+    @include tablets {
+        font-size: 14px;
+    }
+    @include phones {
+        display: flex;
+        margin-top: 20px;
+        justify-content: flex-start;
+    }
+
 }
 tr { 
     
@@ -61,11 +75,18 @@ tr {
     }
 }
 .about__text {
-    width: 100%;
-    margin-left: 155px;
-    border: 1px solid red;
+    width: 64%;
+    margin-left: 105px;
     @include desktop {
-        width: 50%;
+        margin-left: 55px;
+    }
+    @include tablets {
+        margin-left: 35px;
+        font-size: 14px; 
+    }
+    @include phones {
+        width: 100%;
+        margin-left: 0;
     }
     display: flex;
     flex-direction: column;
@@ -80,11 +101,21 @@ tr {
     font-weight: 700;
     font-size: 36px;
     margin-bottom: 25px;
+    @include tablets {
+        font-size: 30px
+    }
+
 }
 .about__text__ido {
     opacity: .5;
     margin-bottom: 90px;
     line-height: 1.9;
+    @include tablets {
+        margin-bottom: 50px;
+    }
+    @include phones {
+        margin-bottom: 30px;
+    }
 }
 .about__text__quote {
     position: relative;

@@ -6,22 +6,51 @@
     display: flex;
     height: 100vh;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 0;
+    @include tablets {
+        justify-content: flex-start;
+        padding: 3% 0;
+    }
+    @include phones {
+        height: 100%;
+    }
 }
 .skills__content {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 130px;
-    padding: 0 26% 0 34%
+    padding: 0 20% 0 30%;
+    @include desktop {
+        padding: 0 10% 0 20%;
+    }
+    @include tablets {
+        padding: 0 10%;
+        align-items: center;
+        text-align: center;
+    }
+    @include phones {
+        padding: 0;
+        justify-content: flex-start;
+        text-align: start;
+    }
 }
 
 .skills__content__text {
     margin-top: 50px;
     opacity: .5;
     line-height: 1.9;
+    @include tablets {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 20px;
+    }
 }
 .title__content {
     font-size: 30px;
+    @include tablets {
+
+    }
 }
 

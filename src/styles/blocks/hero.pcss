@@ -14,19 +14,22 @@
 }
 .hero__content {
   display: flex;
-  margin-top: 50px;
-  /* border: 1px solid red; */
+  margin-top: 80px;
   z-index: 100;
-
+  @include desktop {
+    margin-top: -320px;
+  }
   @include tablets {
-    margin-top: 350px;
+    margin-top: 120px;
+  }
+  @include phones {
+    margin-top: 160px;
   }
 
 }
 .hero__content__col {
   display: flex;
   justify-content: center;
-  /* border: 1px solid blue; */
   padding: 0 150px 0 50px;
     @include tablets {
     flex-direction: column;
@@ -42,7 +45,6 @@
   font-size: 18px;
   opacity: .4;
   line-height: 1.9;
-  /* border: 1px solid green; */
   @include tablets {
     text-align: center;
     width: 35%;
@@ -59,8 +61,8 @@
   font-size: 72px;
   font-weight: 800;
   line-height: 1;
-  /* border: 1px solid green; */
   @include tablets {
+    text-align: center;
     margin-top: 40px;
     font-size: 48px;
   }

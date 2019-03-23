@@ -4,8 +4,11 @@
   overflow: hidden;
   @include tablets {
     background: url('~images/content/bg/first_bg.jpg') center center no-repeat / cover;
+    min-height: auto;
   }
-
+  @include phones {
+   
+  }
   
 }
 .second-section {
@@ -18,9 +21,26 @@
   min-height: 1020PX;
   display: flex;
   background: url('~images/content/bg/third_bg.jpg') center center no-repeat / cover;
-  .arms-pic {
-    position: absolute;
-    bottom: -10%;
+  @include phones {
+    overflow: hidden;
+  }
+    .skills__bg {
+      position: absolute;
+      width: 664px;
+      bottom: -10%;
+      @include desktop {
+        width: 395px;
+        left: -75px;
+      }
+      @include tablets {
+        transform: rotate(-90deg) translateY(-30%);
+        width: 487px;
+        left: 50%;
+      }
+      @include phones {
+        width: 320px;
+        bottom: -80px;
+    }
   }
 }
 .four-section {

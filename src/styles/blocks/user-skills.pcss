@@ -2,31 +2,61 @@
 .skills__user {
     display: flex;
     z-index: 10;
-    margin-top: 80px;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include tablets {
+        justify-content: center;
+        margin-top: 50px;
+    }
 }
 .skills__list {
     display: flex;
     flex-flow: column nowrap;
-    padding-left: 42%;
+
 }
 .skills__item {
-    display: flex;
+    display: flex; 
     flex-flow: column nowrap;
     margin-bottom: 45px;
+    height: 50%;
     &:last-child {
         margin-bottom: 0;
+    }
+    @include tablets {
+        align-items: center;
+        margin-bottom: 20px;
     }
      
 }
 .skills__title {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .diagram__list {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    flex: 1;
+    @include tablets {
+        justify-content: center;
+    }
 }
 .diagram__item {
     position: relative;
-    margin-right: 70px;
+    margin-right: 50px;
+
+    &:first-child {
+        margin-bottom: 50px;
+    }
+    @include desktop {
+        margin-right: 35px;
+    }
+    @include phones {
+        margin-right: 10px;
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+    }
 }
 .skill {
     width: 144px;
@@ -61,7 +91,7 @@
     font-weight: 700;
     opacity: .5;
     position: absolute;
-    top: 50%;
+    top: 72px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
