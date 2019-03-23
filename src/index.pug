@@ -126,7 +126,7 @@ html(lang="en")
             .container.reviews__container
               .reviews__content
                 .reviews__title
-                  h2.title Что обо мне говорят
+                  h2.title.review__title Что обо мне говорят
                   .reviews__slider--buttons
                     button.circle__button(type='button')
                       +icon('arrow-down','arrow-down-icon arro-down-icon__rotate')
@@ -154,10 +154,10 @@ html(lang="en")
                           .reviews__user-data__name Владимир Сабанцев                
                           .reviews__user-data__post Преподаватель                
               .reviews__form
-                h2.title Связаться со мной
+                h2.title.review__title Связаться со мной
                 .reviews__form__content
-                  .reviews__form__row
-                    label.reviews__form__block
+                  .reviews__form__row.first__row
+                    label.reviews__form__block.first__block
                       .reviews__form__block__name Введите ваше имя
                       .reviews__form_block__field
                         +icon('user','form-icon')
