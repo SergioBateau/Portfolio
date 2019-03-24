@@ -62,28 +62,8 @@ html(lang="ru")
                 h2.title__content Чем я могу быть вам полезен
                 p.skills__content__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
               .skills__user
-                ul.skills__list
-                  -
-                    var skills = [
-                      ['Frontend', ['HTML5', 'CSS3', 'Javascript', 'Jquery и Vue.js']],
-                      ['Workflow', ['Git', 'Terminal', 'Gulp','Webpack']],
-                    ]
-                  each item in skills
-                    li.skills__item.skills__row
-                      h3.skills__title #{item[0]}
-                      ul.diagram__list
-                        each skill in item[1]
-                          li.diagram__item
-                            .skill
-                              svg(viewBox='0 0 144 144' preserveAspectRatio='none').skill__shape
-                                circle(
-                                  r=67 cx='72' cy="72"
-                                ).skill__circle.skill__circle--under
-                                circle(r=67 cx='72' cy="72" ref="color-circle" stroke="url(#gradient)").skill__circle.skill__circle--above
-                                linear-gradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                                  stop(offset="0%" stop-color="#5500f2")
-                                  stop(offset="100%" stop-color="#8f00ef")
-                            .skill__title #{skill}
+                #skills-component
+
         section#my-work.four-section
           .my-work
             .container.my-work__container
@@ -173,4 +153,4 @@ html(lang="ru")
                 button.send-button(type='submit') Отправить
       include ./sections/footer
     include ./sections/hamburger-menu
-          
+    include ./sections/entry        
