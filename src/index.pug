@@ -96,40 +96,12 @@ html(lang="ru")
                   a.my-work__content__link(href='#')
                     +icon('link','link-icon')
                     |Посмотреть сайт  
-        section#reviews.five-section
+        section#reviews__form.five-section
           .leave__bg
             +image('content/bg/leaves4.png','leaves4-pic')
           .reviews
             .container.reviews__container
-              .reviews__content
-                .reviews__title
-                  h2.title.review__title Что обо мне говорят
-                  .reviews__slider--buttons
-                    button.circle__button(type='button')
-                      +icon('arrow-down','arrow-down-icon arro-down-icon__rotate')
-                    button.circle__button(type='button')
-                      +icon('arrow-down','arrow-down-icon') 
-                .reviews__slider
-                  ul.reviews__slider-list
-                    li.reviews__slider-item
-                      .reviews__slider-item__text
-                        |Этот парень проходил обучение веб-разработке не где-то, а в Loftschool!
-                        |4,5 месяца только самых тяжелых испытаний и бессоных ночей!
-                      .reviews__slider-item__user
-                        .reviews__user-photo
-                          +image('content/photo/KD.png','photo-pic1')
-                        .reviews__user-data
-                          .reviews__user-data__name Ковальчук Дмитрий                 
-                          .reviews__user-data__post Основатель Loftschool                
-                    li.reviews__slider-item
-                      .reviews__slider-item__text
-                        |Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
-                      .reviews__slider-item__user
-                        .reviews__user-photo
-                          +image('content/photo/SV.png','photo-pic1')
-                        .reviews__user-data
-                          .reviews__user-data__name Владимир Сабанцев                
-                          .reviews__user-data__post Преподаватель                
+              #reviews-component
               .reviews__form
                 h2.title.review__title Связаться со мной
                 .reviews__form__content
