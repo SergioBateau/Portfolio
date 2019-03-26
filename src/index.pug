@@ -11,22 +11,22 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
-        section#hero.first-section
+        section#hero.hero-section
           include ./sections/parallax
           .hero.fullscreen-section
             .container.hero__container
               include ./sections/header
               .hero__content
                 .hero__content__col
-                  .hero__content__col-left 
+                  h1.hero__content__col-left 
                     |Личный сайт 
                     span веб разработчика
-                  .hero__content__col-right 
+                  h1.hero__content__col-right 
                     |Сергей Кораблев
               .hero__scroll
                 a.scroll-link(href="#about") Скролл
           //- .empty
-        section#about.second-section      
+        section#about.about-section      
           .about
             .container.about__container
               .about__col
@@ -53,7 +53,7 @@ html(lang="ru")
                     |Мне нравится делать интересные и современные проекты.
                   .about__text__quote
                     |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section#skills.third-section
+        section#skills.skills-section
           .skills__bg
             +image('content/bg/arms.png','arms-pic')
           .skills
@@ -64,7 +64,7 @@ html(lang="ru")
               .skills__user
                 #skills-component
 
-        section#my-work.four-section
+        section#my-work.my-work-section
           .my-work
             .container.my-work__container
               h2.title.my-work__title Мои работы
@@ -96,33 +96,33 @@ html(lang="ru")
                   a.my-work__content__link(href='#')
                     +icon('link','link-icon')
                     |Посмотреть сайт  
-        section#reviews__form.five-section
+        section#reviews__form.reviews-section
           .leave__bg
             +image('content/bg/leaves4.png','leaves4-pic')
           .reviews
             .container.reviews__container
               #reviews-component
-              .reviews__form
+              form.reviews__form
                 h2.title.review__title Связаться со мной
                 .reviews__form__content
                   .reviews__form__row.first__row
-                    label.reviews__form__block.first__block
+                    label.reviews__form__block.first__block(for='name')
                       .reviews__form__block__name Введите ваше имя
                       .reviews__form_block__field
                         +icon('user','form-icon')
-                        input.form__block__input(type="text" id='name' name='name' placeholder='Ковальчук Дмитрий')
-                    label.reviews__form__block
+                    input.form__block__input(type="text" id='name' name='name' placeholder='Ковальчук Дмитрий')
+                    label.reviews__form__block(for='email')
                       .reviews__form__block__name Введите ваш email
                       .reviews__form_block__field
                         +icon('envelope','form-icon')
-                        input.form__block__input(type="email" id='email' name='email' placeholder='loftschool@study.com')
+                    input.form__block__input(type="email" id='email' name='email' placeholder='loftschool@study.com')
                   .reviews__form__row
-                    label.reviews__form__block
+                    label.reviews__form__block(for='comment')
                       .reviews__form__block__name Сообщение к письму
                       .reviews__form_block__field
                         +icon('message','form-icon')
-                        textarea.form__block__input(type="text", id='comment', name='comment', placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
-                button.send-button(type='submit') Отправить
+                    textarea.form__block__input(type="text", id='comment', name='comment', placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
+                button.send-button(type='button') Отправить
       include ./sections/footer
     include ./sections/hamburger-menu
     include ./sections/entry        
