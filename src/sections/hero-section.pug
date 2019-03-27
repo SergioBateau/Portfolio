@@ -4,11 +4,11 @@ section#hero.hero-section
         .container.hero__container
             include ./header
             .hero__content
-                .hero__content__col
-                    h1.hero__content__col-left 
+                .hero__col
+                    h1.hero__text 
                         |Личный сайт 
                         span веб разработчика
-                    h1.hero__content__col-right 
+                    h1.hero__name 
                         |Сергей Кораблев
             .hero__scroll(id='arrow-scroll' v-scroll-to="'#about'")
-                a.scroll-link(href="#") Скролл
+                a.hero__link(href="#") Скролл

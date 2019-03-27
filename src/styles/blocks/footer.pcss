@@ -23,7 +23,7 @@ footer {
         margin-top: 20px;
     }
 }
-.footer__col__left {
+.footer-copyright {
     width: 35%;
     display: flex;
     @include desktop {
@@ -36,7 +36,7 @@ footer {
         margin-bottom: 20px;
     }
 }
-.col__data {
+.footer-data {
     width: 30%;
     display: flex;
     flex-flow: column nowrap;
@@ -47,7 +47,7 @@ footer {
         width: 100%;
     }
 }
-.footer__col__right {
+.footer-content {
     width: 65%;
     display: flex;
     flex-flow: column nowrap;
@@ -55,7 +55,7 @@ footer {
         width: 75%;
     }
 }
-.col__year {
+.footer-copyright__year {
     font-size: 48px;
     font-weight: 600;
     opacity: 0.1;
@@ -65,19 +65,19 @@ footer {
         width: 100%;
     }
 }
-.col-data__name {
+.footer-data__name {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.7;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-.col-data__content {
+.footer-data__content {
     font-weight: 400;
     opacity: .15;
     line-height: 2;
 }
-.footer__menu {
+.footer-menu {
     display: flex;
     align-items: flex-start;
     width: 100%;
@@ -88,7 +88,7 @@ footer {
         flex-flow: row wrap;
         align-items: flex-start;
     
-        .menu-item {
+        .menu-list__item {
             height: 40px;
             width: 70px;
             &:nth-child(odd){
@@ -100,14 +100,14 @@ footer {
         } 
     }
 }
-.footer__desc {
+.footer-desc {
     display: flex;
     width: 100%;
     font-weight: 400;
     line-height: 1.8;
 
 }
-.footer__desc__col {
+.footer-desc__col {
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
@@ -115,34 +115,30 @@ footer {
         flex-direction: column;
     }
 }
-.footer__desc__col-left {
+.footer-desc__part {
     display: flex;
     width: 50%;
     flex-flow: column nowrap;
     margin-right: 5%;
+    &:last-child {
+        margin-right: 0;
+    }
     @include tablets {
         width: 100%;
         margin-right: 0;
         margin-bottom: 40px;
     }
 }
-.footer__desc__col-right {
-    display: flex;
-    width: 50%;
-    flex-flow: column nowrap;
-    @include tablets {
-        width: 100%;
-    }
-}
-.desc__quote__author {
+
+.footer-desc__author {
     font-style: italic;
     opacity: 1;
 }
-.desc__loftschool  {
+.footer-desc__loftschool  {
     margin-bottom: 30px;
     opacity: .3;
 }
-.desc__quote__text {
+.footer-desc__text {
     margin-bottom: 30px;
     opacity: .3;
 }

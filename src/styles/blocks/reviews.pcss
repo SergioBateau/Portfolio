@@ -13,12 +13,7 @@
     margin-top: 140px;
 
 }
-.reviews__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.reviews__title {
+.reviews__control {
     display: flex;
     margin-bottom: 90px;
     @include tablets {
@@ -30,7 +25,7 @@
         align-items: center;
     }
 }
-.reviews__slider--buttons {
+.reviews__buttons {
     margin-left: 100px;
     @include tablets {
         margin-left: 50px;
@@ -39,7 +34,7 @@
         margin-left: 0;
     }
 }
-.circle__button {
+.circle-button {
     &:first-child {margin-right: 30px;}
 
 }
@@ -57,27 +52,30 @@
     }
 }
 .reviews__slider {
-    /* display: flex; */
     overflow: hidden;
     width: 1000px;
-}
-.reviews__slider-list {
-    display: flex;
-    padding-left: 9%;
-    /* width: 70%; */
-    will-change: transform;
-    transition: transform .3s;
     @include desktop {
-        width: 90%;
+        width: 900px;
     }
     @include tablets {
-        width: 100%;
+        width: 800px;
     }
     @include phones {
-        margin-top: 30px;
+        width: 400px;;
     }
 }
-.review__title {
+.reviews-list {
+    display: flex;
+    padding-left: 9%;
+    will-change: transform;
+    transition: transform .3s;
+
+    @include phones {
+        margin-top: 30px;
+        padding: 0;
+    }
+}
+.reviews-title {
     @include tablets {
         font-size: 30px;
     }
@@ -86,7 +84,7 @@
         text-align: center;
     }
 }
-.reviews__slider-item {
+.reviews-list__item {
     display: flex;
     flex-direction: column;
     width: 27%;
@@ -94,33 +92,20 @@
     justify-content: flex-start;
     margin-right: 150px;
     width: 350px;
-    /* &:first-child {
-    margin-right: 140px;
-    } */
     @include desktop {
-        width: 50%;
-        /* &:first-child {
         margin-right: 100px;
-        } */
     }
     @include tablets {
-        /* &:first-child {
-            margin-right: 50px;
-        } */
-    }
-    @include phones {
-        &:not(:first-child) {
-            display: none;
-        }
+        margin-right: 50px;
     }
 
 }
-.reviews__slider-item__text,
-.reviews__user-data__post {
+.reviews-list__text,
+.reviews-list__post {
     opacity: .5;
     line-height: 1.9;
 }
-.reviews__slider-item__text {
+.reviews-list__text {
     position: relative;
     line-height: 1.7;
     height: 60%;
@@ -141,16 +126,16 @@
         }
     }
 }
-.reviews__user-data__name {
+.reviews-list__name {
     font-weight: 700;
 }
-.reviews__slider-item__user {
+.reviews-list__user {
     display: flex;
     margin-top: 30px;
     align-items: flex-start;
     height: 40%;
 }
-.reviews__user-photo {
+.reviews-list__photo {
     display: inline-block;
     width: 75px;
     height: 75px;
@@ -164,103 +149,10 @@
     height: auto;
 
 }
-.reviews__user-data {
+.reviews-list__data {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-.reviews__form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-    @include tablets {
-        align-items: center;
-    }
-}
-.reviews__form__content {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin-top: 80px;
-    @include desktop {
-        width: 80%;
-    }
-    @include tablets {
-        margin-top: 0;
-        width: 100%;
-    }
-    @include phones {
-        margin-top: 20px;
-    }
-}
-.reviews__form__row {
-    display: flex;
-    margin-bottom: 45px;
-    &:last-child {
-        margin-bottom: 0;
-    }
-    @include phones {
-        margin-bottom: 20px;
-    }
-
-}
-.first__row {
-    @include phones {
-        flex-direction: column;
-    }
-
-}
-.first__block {
-    @include phones {
-        margin-bottom: 20px;
-    }
-}
-.reviews__form__block__name {
-    opacity: .3;
-    padding-left: 55px;
-    margin-bottom: 15px;
-}
-.reviews__form__block {
-    margin-right: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-}
-.reviews__form_block__field {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid white;
-    padding-bottom: 10px;
-    cursor: pointer;
-    &:hover {
-         border-bottom: 1px solid #ff9a00;
-         color: #ff9a00;
-        .form-icon {
-            fill: #ff9a00;
-            opacity: 1;
-            
-        }
-    }
-}
-.form-icon {
-    width: 30px;
-    fill: white;
-    opacity: .3;
-    margin-right: 25px;
-
-}
-.form__block__input {
-    flex: 1;
-    background: transparent;
-    border: 0;
-    width: 100%;
-    font-weight: 700;
-    font-size: 18px;
-    resize: none;
-    line-height: 1.7;
-    color: #ff9a00;
 }
 
 

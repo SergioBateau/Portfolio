@@ -1,0 +1,93 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    @include tablets {
+        align-items: center;
+    }
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 80px;
+    @include desktop {
+        width: 80%;
+    }
+    @include tablets {
+        margin-top: 0;
+        width: 100%;
+    }
+    @include phones {
+        margin-top: 20px;
+    }
+}
+.form-row {
+    display: flex;
+    margin-bottom: 45px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include phones {
+        margin-bottom: 20px;
+    }
+
+}
+.form-row__phones {
+    @include phones {
+        flex-direction: column;
+    }
+
+}
+.form-block__phones {
+    @include phones {
+        margin-bottom: 20px;
+    }
+}
+.form-block__name {
+    opacity: .3;
+    padding-left: 55px;
+    margin-bottom: 15px;
+}
+.form-block {
+    margin-right: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+.form-block__field {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+         border-bottom: 1px solid #ff9a00;
+         color: #ff9a00;
+        .form-icon {
+            fill: #ff9a00;
+            opacity: 1;
+            
+        }
+    }
+}
+.form-icon {
+    width: 30px;
+    fill: white;
+    opacity: .3;
+    margin-right: 25px;
+
+}
+.form-block__input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    resize: none;
+    line-height: 1.7;
+    color: #ff9a00;
+}
