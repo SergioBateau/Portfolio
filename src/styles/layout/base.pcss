@@ -5,6 +5,9 @@ html {
   @include tablets {
     font-size: 14px;
   }
+  @include phones {
+    font-size: 14px;
+  }
 }
 body,
 html {
@@ -17,7 +20,8 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-color;
+  color: white;
+  font-weight: 600;
 }
 
 .wrapper {
@@ -45,6 +49,7 @@ body {
 button {
   border: 0;
   cursor: pointer;
+  padding: 0;
 }
 
 * {
@@ -66,7 +71,14 @@ h6 {
   font-weight: normal;
   margin: 0;
 }
-
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
 p {
   margin: 0;
   padding: 0;
@@ -74,12 +86,16 @@ p {
 
 button[type="button"] {
   cursor: pointer;
-  background-color: transparent;
 }
 
 a {
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
+}
+
+span {
+  white-space: nowrap;
 }
 
 img {
@@ -87,3 +103,12 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+textarea::placeholder { 
+  color: white; 
+  width: 70%;
+  overflow: hidden;
+}
+textarea {
+  overflow: hidden;
+}
+input::placeholder { color: white; }

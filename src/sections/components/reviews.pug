@@ -1,0 +1,19 @@
+script(type='text/x-template')#reviews
+    .reviews__content
+        .reviews__control
+            h2.title.reviews-title Что обо мне говорят
+            .reviews__buttons
+                button.circle-button(type='button' @click="slide('prev')")
+                    +icon('arrow-down','arrow-down-icon arro-down-icon__rotate')
+                button.circle-button(type='button' @click="slide('next')")
+                    +icon('arrow-down','arrow-down-icon') 
+        .reviews__slider
+            ul.reviews-list(ref='reviews-sliders')
+                li.reviews-list__item(v-for='review in reviews')
+                    blockquote.reviews-list__text {{review['review-text']}} 
+                    .reviews-list__user
+                            .reviews-list__photo
+                                img(:src="review['review-pic']").photo-pic1
+                            .reviews-list__data
+                                .reviews-list__name {{review['review-name']}}                 
+                                .reviews-list__post {{review['review-post']}}               

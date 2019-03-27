@@ -1,0 +1,58 @@
+import Vue from "vue";
+
+new Vue({
+  el: "#reviews-component",
+  template: "#reviews",
+  data() {
+    return {
+      reviews: [],
+      strafe: 0
+    };
+  },
+  methods: {
+    arrWithRequiredImages(array) {
+      return array.map(item => {
+        const requredPic = require(`../images/content/photo/${item["review-pic"]}`);
+        item["review-pic"] = requredPic;
+
+        return item;
+      });
+    },
+    slide(direction) {
+      const slider = this.$refs["reviews-sliders"];
+      
+      const elemWidth = +slider.getBoundingClientRect().width;
+
+      
+      const oneItemWidth = +slider.firstElementChild.getBoundingClientRect()
+        .width;
+        
+      const itemsInView = 2;
+      const availableWidth =
+        oneItemWidth * (slider.children.length - itemsInView);
+
+      switch (direction) {
+        case "next":
+          if (Math.abs(this.strafe) <= availableWidth) {
+            this.strafe += elemWidth;
+          }
+          break;
+        case "prev":
+          if (Math.abs(this.strafe) > 0) {
+            this.strafe -= elemWidth;
+          }
+          break;
+      }
+
+      slider.style.transform = `translateX(-${this.strafe}px)`;
+    },
+
+  },
+  created() {
+    const reviews = require("../data/reviews.json");
+    this.reviews = this.arrWithRequiredImages(reviews);
+  },
+  mounted() {
+    this.resetSliderOnResize();
+  }
+});
