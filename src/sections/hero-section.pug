@@ -1,0 +1,14 @@
+section#hero.hero-section
+    include ./parallax
+    .hero.fullscreen-section
+        .container.hero__container
+            include ./header
+            .hero__content
+                .hero__content__col
+                    h1.hero__content__col-left 
+                        |Личный сайт 
+                        span веб разработчика
+                    h1.hero__content__col-right 
+                        |Сергей Кораблев
+            .hero__scroll(id='arrow-scroll' v-scroll-to="'#about'")
+                a.scroll-link(href="#") Скролл

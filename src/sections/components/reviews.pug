@@ -10,11 +10,10 @@ script(type='text/x-template')#reviews
         .reviews__slider
             ul.reviews__slider-list(ref='reviews-sliders')
                 li.reviews__slider-item(v-for='review in reviews')
-                    .reviews__slider-item__text {{review['review-text']}}
-                        
+                    blockquote.reviews__slider-item__text {{review['review-text']}} 
                     .reviews__slider-item__user
-                        .reviews__user-photo
-                            img(:src="review['review-pic']").photo-pic1
-                        .reviews__user-data
-                            .reviews__user-data__name {{review['review-name']}}                 
-                            .reviews__user-data__post {{review['review-post']}}               
+                            .reviews__user-photo
+                                img(:src="review['review-pic']").photo-pic1
+                            .reviews__user-data
+                                .reviews__user-data__name {{review['review-name']}}                 
+                                .reviews__user-data__post {{review['review-post']}}               

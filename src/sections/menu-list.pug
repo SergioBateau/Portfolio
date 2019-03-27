@@ -1,13 +1,13 @@
-ul.menu-list
+ul.menu-list(id="menu-scroll")
     li#nav__item.menu-item
-        a.menu-link(href='#hero') Главная
+        a.menu-link(href='#' v-scroll-to="'#hero'") Главная
     li#nav__item.menu-item
-        a.menu-link(href='#about') Обо мне
+        a.menu-link(href='#' v-scroll-to="'#about'") Обо мне
     li#nav__item.menu-item
-        a.menu-link(href='#skills') Навыки
+        a.menu-link(href='#' v-scroll-to="'#skills'") Навыки
     li#nav__item.menu-item
-        a.menu-link(href='#my-work') Работы
+        a.menu-link(href='#' v-scroll-to="'#my-work'") Работы
     li#nav__item.menu-item
-        a.menu-link(href='#reviews') Отзывы
+        a.menu-link(href='#' v-scroll-to="'#reviews'") Отзывы
     li#nav__item.menu-item
-        a.menu-link(href='#reviews__form') Связаться
+        a.menu-link(href='#' v-scroll-to="'#form'") Связаться

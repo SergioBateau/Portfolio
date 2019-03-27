@@ -1,0 +1,32 @@
+section#my-work.my-work-section
+          .my-work
+            .container.my-work__container
+              h2.title.my-work__title Мои работы
+              .my-work__col
+                .my-work__slider
+                  .my-work__slider__bg
+                    .my-work__slider__fullpic
+                      +image('content/bg/preview1.jpg','preview-bg')
+                    ul.slider__small__list
+                      li.slider__small__item
+                        +image('content/bg/preview_small_1.jpg', 'preview-bg__small')
+                      li.slider__small__item
+                        +image('content/bg/preview_small_2.jpg', 'preview-bg__small')
+                      li.slider__small__item
+                        +image('content/bg/preview_small_3.jpg', 'preview-bg__small')
+                      li.slider__small__item
+                        +image('content/bg/preview_small_4.jpg', 'preview-bg__small')
+                    .slider__control__buttons
+                      button.previews__slider__button(type='button')
+                      button.previews__slider__button.previews__slider__button__rotate(type='button')
+                .my-work__content
+                  ul.my-work__content__list
+                    li.my-work__content__item HTML
+                    li.my-work__content__item CSS
+                    li.my-work__content__item Javascript
+                  .my-work__content__text
+                    h3.my-work__content__title Сайт школы образования
+                    p.my-work__content__desc Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                  a.my-work__content__link(href='#')
+                    +icon('link','link-icon')
+                    |Посмотреть сайт 

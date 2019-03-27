@@ -7,122 +7,21 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
     title Portfolio | main page
   body
     .wrapper
       .maincontent
-        section#hero.hero-section
-          include ./sections/parallax
-          .hero.fullscreen-section
-            .container.hero__container
-              include ./sections/header
-              .hero__content
-                .hero__content__col
-                  h1.hero__content__col-left 
-                    |Личный сайт 
-                    span веб разработчика
-                  h1.hero__content__col-right 
-                    |Сергей Кораблев
-              .hero__scroll
-                a.scroll-link(href="#about") Скролл
-          //- .empty
-        section#about.about-section      
-          .about
-            .container.about__container
-              .about__col
-                .about__me
-                  .about__me__photo
-                    +image('content/photo/photo.jpg','photo-pic')
-                  table.about__me__table
-                    tr
-                      td.question Проживаю:
-                      td.answer Санкт-Петербург
-                    tr
-                      td.question Возраст:
-                      td.answer 33 года
-                    tr
-                      td.question Родился:
-                      td.answer 6 апреля 1985
-                .about__text
-                  .about__text__hello
-                    |Привет, меня зовут
-                  .about__text__name
-                    |Сергей Кораблев
-                  .about__text__ido
-                    |Я занимаюсь разработкой современных сайтов и приложений.
-                    |Мне нравится делать интересные и современные проекты.
-                  .about__text__quote
-                    |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section#skills.skills-section
-          .skills__bg
-            +image('content/bg/arms.png','arms-pic')
-          .skills
-            .container.skills__container
-              .skills__content
-                h2.title__content Чем я могу быть вам полезен
-                p.skills__content__text Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
-              .skills__user
-                #skills-component
+        include ./sections/hero-section
 
-        section#my-work.my-work-section
-          .my-work
-            .container.my-work__container
-              h2.title.my-work__title Мои работы
-              .my-work__col
-                .my-work__slider
-                  .my-work__slider__bg
-                    .my-work__slider__fullpic
-                      +image('content/bg/preview1.jpg','preview-bg')
-                    ul.slider__small__list
-                      li.slider__small__item
-                        +image('content/bg/preview_small_1.jpg', 'preview-bg__small')
-                      li.slider__small__item
-                        +image('content/bg/preview_small_2.jpg', 'preview-bg__small')
-                      li.slider__small__item
-                        +image('content/bg/preview_small_3.jpg', 'preview-bg__small')
-                      li.slider__small__item
-                        +image('content/bg/preview_small_4.jpg', 'preview-bg__small')
-                    .slider__control__buttons
-                      button.previews__slider__button(type='button')
-                      button.previews__slider__button.previews__slider__button__rotate(type='button')
-                .my-work__content
-                  ul.my-work__content__list
-                    li.my-work__content__item HTML
-                    li.my-work__content__item CSS
-                    li.my-work__content__item Javascript
-                  .my-work__content__text
-                    h3.my-work__content__title Сайт школы образования
-                    p.my-work__content__desc Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                  a.my-work__content__link(href='#')
-                    +icon('link','link-icon')
-                    |Посмотреть сайт  
-        section#reviews__form.reviews-section
-          .leave__bg
-            +image('content/bg/leaves4.png','leaves4-pic')
-          .reviews
-            .container.reviews__container
-              #reviews-component
-              form.reviews__form
-                h2.title.review__title Связаться со мной
-                .reviews__form__content
-                  .reviews__form__row.first__row
-                    label.reviews__form__block.first__block(for='name')
-                      .reviews__form__block__name Введите ваше имя
-                      .reviews__form_block__field
-                        +icon('user','form-icon')
-                    input.form__block__input(type="text" id='name' name='name' placeholder='Ковальчук Дмитрий')
-                    label.reviews__form__block(for='email')
-                      .reviews__form__block__name Введите ваш email
-                      .reviews__form_block__field
-                        +icon('envelope','form-icon')
-                    input.form__block__input(type="email" id='email' name='email' placeholder='loftschool@study.com')
-                  .reviews__form__row
-                    label.reviews__form__block(for='comment')
-                      .reviews__form__block__name Сообщение к письму
-                      .reviews__form_block__field
-                        +icon('message','form-icon')
-                    textarea.form__block__input(type="text", id='comment', name='comment', placeholder='Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса')
-                button.send-button(type='button') Отправить
+        include ./sections/about-section
+
+        include ./sections/skills-section
+
+        include ./sections/my-work-section
+
+        include ./sections/reviews-section
+
       include ./sections/footer
     include ./sections/hamburger-menu
     include ./sections/entry        

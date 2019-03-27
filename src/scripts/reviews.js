@@ -20,9 +20,15 @@ new Vue({
     },
     slide(direction) {
       const slider = this.$refs["reviews-sliders"];
+      console.log(slider);
+      
       const elemWidth = +slider.getBoundingClientRect().width;
+      console.log(elemWidth);
+      
       const oneItemWidth = +slider.firstElementChild.getBoundingClientRect()
         .width;
+      console.log(oneItemWidth);
+        
       const itemsInView = 2;
       const availableWidth =
         oneItemWidth * (slider.children.length - itemsInView);
@@ -42,31 +48,31 @@ new Vue({
 
       slider.style.transform = `translateX(-${this.strafe}px)`;
     },
-    resetSliderOnResize() {
-      const throttledSliderReset = this.debounse(() => {
-        const slider = this.$refs["reviews-sliders"];
-        this.strafe = 0;
-        slider.style.transform = "translateX(0)";
-      }, 1000);
+    // resetSliderOnResize() {
+    //   const throttledSliderReset = this.debounse(() => {
+    //     const slider = this.$refs["reviews-sliders"];
+    //     this.strafe = 0;
+    //     slider.style.transform = "translateX(0)";
+    //   }, 1000);
 
-      window.addEventListener("resize", throttledSliderReset);
-    },
-    debounse(fn, ms) {
-      let timer = null;
+    //   window.addEventListener("resize", throttledSliderReset);
+    // },
+    // debounse(fn, ms) {
+    //   let timer = null;
 
-      return function(...args) {
-        const onComplete = () => {
-          fn.apply(this, args);
-          timer = null;
-        };
+    //   return function(...args) {
+    //     const onComplete = () => {
+    //       fn.apply(this, args);
+    //       timer = null;
+    //     };
 
-        if (timer) {
-          clearTimeout(timer);
-        }
+    //     if (timer) {
+    //       clearTimeout(timer);
+    //     }
 
-        timer = setTimeout(onComplete, ms);
-      };
-    }
+    //     timer = setTimeout(onComplete, ms);
+    //   };
+    // }
   },
   created() {
     const reviews = require("../data/reviews.json");

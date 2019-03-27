@@ -59,6 +59,7 @@
 .reviews__slider {
     /* display: flex; */
     overflow: hidden;
+    width: 1000px;
 }
 .reviews__slider-list {
     display: flex;
@@ -91,19 +92,21 @@
     width: 27%;
     flex-shrink: 0;
     justify-content: flex-start;
-    &:first-child {
+    margin-right: 150px;
+    width: 350px;
+    /* &:first-child {
     margin-right: 140px;
-    }
+    } */
     @include desktop {
         width: 50%;
-        &:first-child {
+        /* &:first-child {
         margin-right: 100px;
-        }
+        } */
     }
     @include tablets {
-        &:first-child {
+        /* &:first-child {
             margin-right: 50px;
-        }
+        } */
     }
     @include phones {
         &:not(:first-child) {
