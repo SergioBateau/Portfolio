@@ -29,11 +29,10 @@
 .my-work__slider {
     display: flex;
     position: relative;
-    z-index: 10;
     width: 66%;
     min-height: 550px;
     &:before {
-        content: '2';
+        content: attr(data-slide);
         position: absolute;
         top: -10%;
         left: 100%;
@@ -59,9 +58,7 @@
         width: 100%;
     }
 }
-.my-work__bg {
-    z-index: 10;
-}
+
 .my-work__bg,
 .my-work__fullpic {
     position: absolute;
@@ -79,19 +76,23 @@
     position: absolute;
     display: flex;
     right: 0;
-    z-index: 9;
     bottom: 10%;
     @include phones {
         display: none;
     }
 }
 .preview-bg__small {
-    height: 100px;
+    height: 100%;
+    object-fit: cover;
 }
 .slider-list__item {
+    height: 100px;
     cursor: pointer;
-    &:first-child {
+    transition: .2s;
+    &:hover,
+    &.active {
         outline: 3px solid #f29400;
+        z-index: 10;
     }
     @include desktop {
         &:last-child {
@@ -103,7 +104,6 @@
 .slider__buttons {
     position: absolute;
     bottom: 10%;
-    z-index: 20;
     right: 0;
     margin-right: -50px;
     display: flex;
@@ -120,6 +120,7 @@
     color: #2b3948;
     margin-left: 12%;
     width: 25%;
+    z-index: 0;
     @include tablets {
         width: 70%;
         align-items: center;
@@ -171,7 +172,7 @@
     margin-bottom: 30px;
     line-height: 1.9;
 }
-.my-work__title {
+.my-work__company {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 35px;

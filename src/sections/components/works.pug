@@ -1,0 +1,53 @@
+script(type='text/x-template')#slider-container
+    .my-work__col
+        display(
+            :works='works',
+            :currentWork='currentWork',
+            :currentIndex='currentIndex',
+            @slide='handleSlide'
+        )
+        info(
+            :currentWork='currentWork'
+        )
+
+script(type='text/x-template')#slider-display
+    .my-work__slider(:data-slide="currentIndex + 1")
+        .my-work__bg
+            .my-work__fullpic
+                img(:src='currentWork.photo').preview-bg
+            btns(
+                @slide="direction => $emit('slide', direction)"
+            )
+            thumbs(
+                :works='works'
+                :currentWork='currentWork'
+            )
+
+script(type='text/x-template')#slider-thumbs
+    ul.slider-list
+        li.slider-list__item(
+            v-for='work in works' :key='work.id'
+            :class="{active: currentWork.id === work.id }"
+            )
+            img(:src='work.photo' alt='').preview-bg__small
+
+script(type='text/x-template')#slider-btns
+    .slider__buttons
+        button.previews__button(type='button' @click="$emit('slide', 'next')")
+        button.previews__button.previews__button--rotate(type='button' @click="$emit('slide', 'prev')")
+
+script(type='text/x-template')#slider-info
+    .my-work__content
+        tags(
+            :tagsArray='tagsArray'
+        )
+        .my-work__text
+            h3.my-work__company {{currentWork.title}}
+            p.my-work__desc {{currentWork.desc}}
+        a.my-work__link(:href='currentWork.link')
+            +icon('link','link-icon')
+            |Посмотреть сайт 
+
+script(type='text/x-template')#slider-tags
+    ul.my-work-list
+        li.my-work-list__item(v-for='tag in tagsArray') {{tag}}
