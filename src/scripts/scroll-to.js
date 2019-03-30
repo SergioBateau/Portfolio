@@ -19,19 +19,19 @@ Vue.use(VueScrollTo, {
 });
 
 new Vue({
-  el: '#menu-scroll',
+  el: '#scroll--header',
   methods: {
   }
 });
 
 new Vue({
-  el: '#arrow-scroll',
+  el: '#scroll--arrow',
   methods: {
   }
 });
 
 new Vue({
-  el: '#footer-scroll',
+  el: '#scroll--footer',
   methods: {
   }
 });

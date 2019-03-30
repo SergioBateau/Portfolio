@@ -1,9 +1,8 @@
 header.header
-    .header-logo
-        .header-logo__link СК
-    .header-menu
-        include ./menu-list
-    .header-soc
-        include ./soc-list
-    button.hamburger-menu-link(type='button')
-        .hamburger-menu-link__bars
+    include ./logo
+
+    +menu("header",'header')
+
+    +soc('header')
+
+    include ./hamburger-menu-link

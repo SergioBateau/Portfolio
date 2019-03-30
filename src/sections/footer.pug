@@ -9,15 +9,13 @@ footer.footer
                         |Личный сайт 
                         span веб разработчика
             .footer-content
-                .footer-menu(id="footer-scroll")
-                    include ./menu-list
+                +menu('footer', 'footer')
                 .footer-desc
                     .footer-desc__col
                         .footer-desc__part
                             .footer-desc__loftschool 
                                 |Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                            .footer-desc__soc
-                                include ./soc-list
+                            +soc('footer')
                         .footer-desc__part
                             .footer-desc__quote
                                 .footer-desc__text 

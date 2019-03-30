@@ -27,7 +27,7 @@ for (var hamburgerMenuItem of hamburgerMenuItems) {
     hamburgerMenuItem.addEventListener('click', function (event) {
         var curHamburgerMenuItem = event.currentTarget;
        
-       var contentHamburgerMenuItem = curHamburgerMenuItem.querySelector('.menu-link');
+       var contentHamburgerMenuItem = curHamburgerMenuItem.querySelector('.menu-list__link');
        
        var hrefHamburgerMenuItem = contentHamburgerMenuItem.getAttribute('href');
        
