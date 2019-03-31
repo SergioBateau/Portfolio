@@ -8,12 +8,13 @@
     justify-content: center;
     align-items: center;
 }
-.about__col {
+.about__data {
     width: 100%;
     padding: 0 10% 0 10%;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    border: 1px solid red;
+    flex-flow: column nowrap;
+    justify-content: space-around;
     align-items: flex-start;
     @include desktop {
         padding: 0;
@@ -23,15 +24,17 @@
     }
 }
 .about-me {
-    width: 36%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    border: 1px solid green;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-bottom: 50px;
     @include desktop {
-        width: 36%;
+        /* width: 36%; */
     }
     @include tablets {
-        width: 46%;
+        /* width: 46%; */
+        justify-content: space-between;
     }
     @include phones {
         width: 100%;
@@ -49,9 +52,7 @@
     height: 100%;
     border-radius: 50%;
 }
-.about-me__table {
-    margin-top: 70px;
-    width: 100%;
+.about-content__table {
 
     @include phones {
         display: flex;
@@ -73,28 +74,34 @@ tr {
     }
 }
 .about-content {
-    width: 64%;
-    margin-left: 105px;
     @include desktop {
-        margin-left: 55px;
+        /* margin-left: 55px; */
     }
     @include tablets {
-        margin-left: 35px;
+        /* margin-left: 35px; */
+                justify-content: space-between;
     }
     @include phones {
         width: 100%;
         margin-left: 0;
     }
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     color: white;
+    border: 1px solid green;
+    justify-content: space-around;
 }
-.about-content__hello {
+.about-me__desc {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.about-me__hello {
     opacity: .5;
     margin-bottom: 20px;
 }
-.about-content__name {
+.about-me__name {
     font-weight: 700;
     font-size: 36px;
     margin-bottom: 25px;
@@ -103,12 +110,12 @@ tr {
     }
 
 }
-.about-content__ido {
+.about-me__ido {
     opacity: .5;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     line-height: 1.9;
     @include tablets {
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
     }
     @include phones {
         margin-bottom: 30px;
@@ -121,6 +128,7 @@ tr {
     font-style: italic;
     opacity: .5;
     line-height: 1.9;
+    width: 60%;
     &:before {
         position: absolute;
         left: -7%;
