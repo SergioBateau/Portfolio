@@ -43,11 +43,11 @@
           li.menu-list__item
             a.menu-list__link(href="#") Отзывы
 
-    .page.page__content
+    .page.page__about-me
       main.skills
         .container.skills__container
           .skills__top
-            .title.skills__title Блок "Обо мне"
+            .title.skills__title Блок «Обо мне»
             button(type="button").skills__btn Добавить группу
           ul.skills-list
             li.skills-list__item
@@ -132,10 +132,10 @@
                     input(type="text" value="Frontend").elem
                     .form__btns
                       button(type="button").tick__btn
-                        svg.tick-icon.form__icon
+                        svg.tick-icon.form-icon
                           use(xlink:href="sprite.svg#tick")
                       button(type="button").cross__btn    
-                        svg.cross-icon.form__icon
+                        svg.cross-icon.form-icon
                           use(xlink:href="sprite.svg#cross")
                   ul.skill-list
                     li.skill-list__item
@@ -183,7 +183,62 @@
                     input(type="text" placeholder="100 %").elem.elem__padding
                     button(type="button").elem__plus +
 
+    .page.page__works
+      main.works
+        .container.works__container
+          .works__top
+            .title.works__title Блок «Работы»
+          .works-edit
+            .works-edit__container
+              h2.title.works-edit__title Редактирование работы
+              .works-edit__window
+                .load
+                  .load-window
+                    .load-window__text Перетащите или загрузите для загрузки изображения
+                    button.load-btn(type="button") Загрузить
+                ul.works-edit-list
+                  li.works-edit-list__item Название
+                    label(for='name')
+                    input(type='text' id='name' placeholder="Дизайн сайта для авто салона Porsche").works-edit-list__name.input-data
+                  li.works-edit-list__item Ссылка
+                    label(for='link')
+                    input(type='text' id='link' placeholder="https://www.porshe-pulkovo.ru").works-edit-list__link.input-data
+                  li.works-edit-list__item Описание
+                    label(for='desc')
+                    textarea(type='text' id='desc' placeholder="Порше Центр Пулково-является официальным дилером марки Порше в Санкт-Петербурге и предоставляет полный цикл услуг по продаже и сервисному обслуживанию автомобилей").works-edit-list__desc.input-data
+                  li.works-edit-list__item Добавление тэга
+                    label(for='tag')
+                    input(type='text' id='tag' placeholder="Jquery, Vue.js, HTML5").works-edit-list__link.input-data
+                  li.works-edit-list__item.works-edit-list__skill
+                    .works-edit-list__some
+                      .works-skill-list__name HTML
+                      button(type="button").cross__btn.skill__btn    
+                          svg.cross-icon
+                            use(xlink:href="sprite.svg#cross")
+                    .works-edit-list__some
+                      .works-skill-list__name CSS
+                      button(type="button").cross__btn.skill__btn    
+                          svg.cross-icon.skill__icon
+                            use(xlink:href="sprite.svg#cross")
+                    .works-edit-list__some
+                      .works-skill-list__name JavaScript
+                      button(type="button").cross__btn.skill__btn    
+                          svg.cross-icon
+                            use(xlink:href="sprite.svg#cross")
+              .works-edit__btns
+                button(type='button').cancel__btn Отмена
+                button(type='button').save__btn Сохранить
+
+    .page.page__works-add
+      main.works-add
+        .container.works-add__container
+          ul.works-add-list
+            li.works-add-list__item
+              
+
+
 </template>
+
 
 <style lang="postcss">
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&subset=cyrillic');
@@ -197,6 +252,8 @@
 @import "../styles/admin/skills.pcss";
 @import "../styles/admin/base-admin.pcss";
 @import "../styles/admin/svg.pcss";
+@import "../styles/admin/works-edit.pcss";
+@import "../styles/admin/works-add.pcss";
 
 @import "../styles/blocks/close.pcss";
 
