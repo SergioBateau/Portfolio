@@ -233,8 +233,68 @@
       main.works-add
         .container.works-add__container
           ul.works-add-list
+            li.works-add-list__item.works-add-list__item--plus
+              button(type='button').works-add-list__btn +
+              .works-add-list__text-add Добавить работу
             li.works-add-list__item
-              
+              img(src="../images/content/bg/preview_small_1.jpg" alt='Фото работы').preview-header__pic
+              .works-add-list__content
+                h4.works-add-list__title Сайт школы образования
+                p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                a.works-add-list__link(href="#") http://loftschool.ru
+              .works-add-list__btns
+                button(type="button").works-add-list__btn-edit Править
+                  svg.pencil-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").works-add-list__btn-delete Удалить
+                  svg.cross-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+            li.works-add-list__item
+              img(src="../images/content/bg/preview_small_2.jpg" alt='Фото работы').preview-header__pic
+              .works-add-list__content
+                h4.works-add-list__title Сайт школы образования
+                p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                a.works-add-list__link(href="#") http://loftschool.ru
+              .works-add-list__btns
+                button(type="button").works-add-list__btn-edit Править
+                  svg.pencil-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").works-add-list__btn-delete Удалить
+                  svg.cross-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+            li.works-add-list__item
+              img(src="../images/content/bg/preview_small_3.jpg" alt='Фото работы').preview-header__pic
+              .works-add-list__content
+                h4.works-add-list__title Сайт школы образования
+                p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                a.works-add-list__link(href="#") http://loftschool.ru
+              .works-add-list__btns
+                button(type="button").works-add-list__btn-edit Править
+                  svg.pencil-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").works-add-list__btn-delete Удалить
+                  svg.cross-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+            li.works-add-list__item
+              img(src="../images/content/bg/preview_small_4.jpg" alt='Фото работы').preview-header__pic
+              .works-add-list__content
+                h4.works-add-list__title Сайт школы образования
+                p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                a.works-add-list__link(href="#") http://loftschool.ru
+              .works-add-list__btns
+                button(type="button").works-add-list__btn-edit Править
+                  svg.pencil-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").works-add-list__btn-delete Удалить
+                  svg.cross-icon.works-add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+
+                
+
 
 
 </template>
