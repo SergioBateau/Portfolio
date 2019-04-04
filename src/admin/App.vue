@@ -225,7 +225,7 @@
                       button(type="button").cross__btn.skill__btn    
                           svg.cross-icon
                             use(xlink:href="sprite.svg#cross")
-              .works-edit__btns
+              .edit__btns
                 button(type='button').cancel__btn Отмена
                 button(type='button').save__btn Сохранить
 
@@ -292,8 +292,37 @@
                 button(type="button").works-add-list__btn-delete Удалить
                   svg.cross-icon.works-add-list__icon
                     use(xlink:href='sprite.svg#cross')
+    .page.page__reviews-add
+      main.reviews-add
+        .container.reviews-add__container    
+          .reviews__top
+            .title.reviews__title Блок «Отзывы» 
+          .reviews-edit
+            .reviews-edit__container
+              h2.title.reviews-edit__title Новый отзыв
+              .reviews-edit__window
+                .reviews-edit__photo
+                  .reviews-edit__pic
+                    svg.man-user-icon
+                      use(xlink:href='sprite.svg#man-user')
+                  .reviews-edit__text Добавить фото
+                form.reviews-edit__form
+                  .reviews-edit__row
+                    .reviews-edit__autor Имя автора
+                      label(for='nameAutor')
+                      input(type='text' id='nameAutor' placeholder='Ковальчук Дмитрий').input-data.reviews-edit__name
+                    .reviews-edit__post Титул автора
+                      label(for='post')
+                      input(type='text' id='post' placeholder='Основатель LoftScholl').input-data.reviews-edit__name
+                  .reviews-edit__row 
+                    .reviews-edit__review Отзыв
+                      label(for='review')
+                      textarea(type='text' id='review' placeholder='Этот парень проходил обучение веб-разработке не где-то, а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!').input-data.reviews-edit__textarea
+              .edit__btns
+                button(type='button').cancel__btn Отмена
+                button(type='button').save__btn Сохранить
 
-                
+
 
 
 
@@ -314,6 +343,7 @@
 @import "../styles/admin/svg.pcss";
 @import "../styles/admin/works-edit.pcss";
 @import "../styles/admin/works-add.pcss";
+@import "../styles/admin/reviews-add.pcss";
 
 @import "../styles/blocks/close.pcss";
 
