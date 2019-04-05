@@ -243,12 +243,12 @@
                 p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
                   |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 a.works-add-list__link(href="#") http://loftschool.ru
-              .works-add-list__btns
-                button(type="button").works-add-list__btn-edit Править
-                  svg.pencil-icon.works-add-list__icon
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.dd-list__icon
                     use(xlink:href='sprite.svg#pencil')
-                button(type="button").works-add-list__btn-delete Удалить
-                  svg.cross-icon.works-add-list__icon
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
                     use(xlink:href='sprite.svg#cross')
             li.works-add-list__item
               img(src="../images/content/bg/preview_small_2.jpg" alt='Фото работы').preview-header__pic
@@ -257,12 +257,12 @@
                 p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
                   |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 a.works-add-list__link(href="#") http://loftschool.ru
-              .works-add-list__btns
-                button(type="button").works-add-list__btn-edit Править
-                  svg.pencil-icon.works-add-list__icon
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
                     use(xlink:href='sprite.svg#pencil')
-                button(type="button").works-add-list__btn-delete Удалить
-                  svg.cross-icon.works-add-list__icon
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
                     use(xlink:href='sprite.svg#cross')
             li.works-add-list__item
               img(src="../images/content/bg/preview_small_3.jpg" alt='Фото работы').preview-header__pic
@@ -271,12 +271,12 @@
                 p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
                   |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 a.works-add-list__link(href="#") http://loftschool.ru
-              .works-add-list__btns
-                button(type="button").works-add-list__btn-edit Править
-                  svg.pencil-icon.works-add-list__icon
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
                     use(xlink:href='sprite.svg#pencil')
-                button(type="button").works-add-list__btn-delete Удалить
-                  svg.cross-icon.works-add-list__icon
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
                     use(xlink:href='sprite.svg#cross')
             li.works-add-list__item
               img(src="../images/content/bg/preview_small_4.jpg" alt='Фото работы').preview-header__pic
@@ -285,12 +285,12 @@
                 p.works-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
                   |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
                 a.works-add-list__link(href="#") http://loftschool.ru
-              .works-add-list__btns
-                button(type="button").works-add-list__btn-edit Править
-                  svg.pencil-icon.works-add-list__icon
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
                     use(xlink:href='sprite.svg#pencil')
-                button(type="button").works-add-list__btn-delete Удалить
-                  svg.cross-icon.works-add-list__icon
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
                     use(xlink:href='sprite.svg#cross')
     .page.page__reviews-add
       main.reviews-add
@@ -318,10 +318,85 @@
                     .reviews-edit__review Отзыв
                       label(for='review')
                       textarea(type='text' id='review' placeholder='Этот парень проходил обучение веб-разработке не где-то, а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!').input-data.reviews-edit__textarea
-              .edit__btns
-                button(type='button').cancel__btn Отмена
-                button(type='button').save__btn Сохранить
+                  .edit__btns
+                    button(type='button').cancel__btn Отмена
+                    button(type='button').save__btn Сохранить
 
+    .page.page__reviews-add
+      main.reviews-add
+        .container.reviews-add__container
+          ul.reviews-add-list
+            li.reviews-add-list__item.reviews-add-list__item--plus
+              button(type='button').reviews-add-list__btn +
+              .reviews-add-list__text-add Добавить отзыв
+            li.reviews-add-list__item
+              .reviews-add-list__user
+                .reviews-add-list__user-photo
+                  img(src="../images/content/photo/KD.jpg" alt='Фото отзыва').reviews-user__pic
+                .reviews-add-list__data
+                  .reviews-add-list__name Владимир Сабанцев
+                  .reviews-add-list__post Преподователь
+              .reviews-add-list__content
+                p.reviews-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+            li.reviews-add-list__item
+              .reviews-add-list__user
+                .reviews-add-list__user-photo
+                  img(src="../images/content/photo/KD.jpg" alt='Фото отзыва').reviews-user__pic
+                .reviews-add-list__data
+                  .reviews-add-list__name Владимир Сабанцев
+                  .reviews-add-list__post Преподователь
+              .reviews-add-list__content
+                p.reviews-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+            li.reviews-add-list__item
+              .reviews-add-list__user
+                .reviews-add-list__user-photo
+                  img(src="../images/content/photo/KD.jpg" alt='Фото отзыва').reviews-user__pic
+                .reviews-add-list__data
+                  .reviews-add-list__name Владимир Сабанцев
+                  .reviews-add-list__post Преподователь
+              .reviews-add-list__content
+                p.reviews-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
+                    use(xlink:href='sprite.svg#cross')
+            li.reviews-add-list__item
+              .reviews-add-list__user
+                .reviews-add-list__user-photo
+                  img(src="../images/content/photo/KD.jpg" alt='Фото отзыва').reviews-user__pic
+                .reviews-add-list__data
+                  .reviews-add-list__name Владимир Сабанцев
+                  .reviews-add-list__post Преподователь
+              .reviews-add-list__content
+                p.reviews-add-list__desk Этот парень проходил обучение веб-разработке не где-то,
+                  |а в LoftScholl! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+              .add-list__btns
+                button(type="button").add-list__btn-edit Править
+                  svg.pencil-icon.add-list__icon
+                    use(xlink:href='sprite.svg#pencil')
+                button(type="button").add-list__btn-delete Удалить
+                  svg.cross-icon.add-list__icon
+                    use(xlink:href='sprite.svg#cross')
 
 
 
@@ -344,6 +419,8 @@
 @import "../styles/admin/works-edit.pcss";
 @import "../styles/admin/works-add.pcss";
 @import "../styles/admin/reviews-add.pcss";
+@import "../styles/admin/reviews-edit.pcss";
+@import "../styles/admin/buttons.pcss";
 
 @import "../styles/blocks/close.pcss";
 

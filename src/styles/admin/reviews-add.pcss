@@ -1,57 +1,72 @@
-
-.reviews-edit__container {
-    padding: 5% 20% 5% 5%;
-    box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
+.reviews-add-list__text-add {
+    font-weight: 300;
 }
-.reviews-edit__title {
-    
-}
-.reviews-edit__photo {
+.reviews-add-list__item {
+    min-height: 380px;
+    color: #414c63;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 30px;
-}
-.reviews-edit__pic {
-    width: 200px;
-    height: 200px;
-    background-color: #dee4ed;
-    position: relative;
-    border-radius: 50%;
-    margin-bottom: 30px;
-}
-.reviews-edit__text {
-    color: #383bcf;
-}
-.reviews-edit__window {
-    display: flex;
-    justify-content: flex-start;
-}
-.reviews-edit__row {
-    display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+    padding: 5% 5% 0 5%;
+    font-weight: 600;
+}
+.reviews-add-list__item--plus {
+    background-color: #3f35cb;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+.reviews-add-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.reviews-add-list__btn {
+    color: white;
+    font-size: 72px;
+    height: 155px;
+    width: 155px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.reviews-add-list__user {
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 1px solid black;
+}
+.reviews-add-list__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 }
-.reviews-edit__autor,
-.reviews-edit__post {
-    border-bottom: 1px solid black;
-    width: 50%;
+.reviews-add-list__user-photo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin-right: 15px;
+    border-radius: 50%;
 }
-.reviews-edit__autor {
-    margin-right: 30px;
+.reviews-user__pic {
+    width: 100%;
+    height: auto;
+    object-position: top;
 }
-.reviews-edit__textarea {
-    margin-top: 30px;
-    width: 610px;
-    height: 70px;
-    color: #414c63;
-    border: 1px solid black;
-    padding: 10px 10px;
-    resize: none;
-    &::-webkit-input-placeholder {
-        color: #414c63;
-        opacity: 1;
-  }
+.reviews-add-list__name {
+    font-size: 18px;
+    font-weight: 700;
+}
+.reviews-add-list__post {
+    opacity: .5;
+}
+.reviews-add-list__desk {
+    opacity: .7;
+    line-height: 1.7;
 }
