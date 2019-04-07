@@ -6,6 +6,12 @@
   display: grid;
   grid-template-columns: .1fr .1fr .1fr;
   grid-template-rows: 1fr;
+  @include tablets {
+    grid-template-columns: .2fr .2fr .2fr;
+  }
+  @include phones {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
 }
 .menu-list__item {

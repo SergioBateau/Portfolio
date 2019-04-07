@@ -8,14 +8,21 @@
   display: flex;
   width: 100%;
   padding: 0 5%;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 .load {
   width: 50%;
   padding: 0 50px 0 0;
+  @include tablets {
+    width: 100%;
+    margin-bottom: 30px;
+  }
   
 }
+
 .load-window {
-  /* width: 492px; */
   height: 277px;
   border: 1px dashed black;
   background-color: #dee4ed;
@@ -25,12 +32,28 @@
   align-items: center;
   padding: 50px 120px;
   text-align: center;
+  @include tablets {
+    border: none;
+    background: url("~images/content/bg/preview_small_1.jpg") center center/ contain no-repeat;
+    height: 260px;
+  }
+  @include phones {
+    height: 158px;
+  }
 }
+
 .works-edit-list {
   width: 50%;
+  @include tablets {
+    width: 100%;
+  }
 }
+
 .load-window__text {
   opacity: .5;
+  @include tablets {
+    display: none;
+  }
 }
 
 .works-edit-list__item {

@@ -3,6 +3,17 @@
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    @include tablets {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include phones {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.works-add__container {
+    @include phones {
+        width: 100%;
+    }
 }
 .works-add-list__item {
     min-height: 560px;
@@ -46,6 +57,12 @@
     justify-content: center;
     align-items: center; 
     flex-direction: column;
+    @include phones {
+       min-height: 110px; 
+       flex-direction: row;
+       padding: 5% 0 5% 10%;
+       justify-content: flex-start;
+    }
 
 }
 .works-add-list__btn {
@@ -56,4 +73,11 @@
     border: 2px solid white;
     border-radius: 50%;
     margin-bottom: 20px;
+    @include phones {
+        height: 55px;
+        width: 55px;
+        margin-bottom: 0;
+        font-size: 24px;
+        margin-right: 30px;
+    }
 }

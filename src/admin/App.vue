@@ -2,27 +2,27 @@
 
 <template lang="pug">
   .main
-    //- .login
-    //-     .login__overlay
-    //-       .login__container
-    //-         form.login__form
-    //-           .close
-    //-           h1.login__title Авторизация
-    //-           .login__form-row
-    //-             .login__form-block
-    //-               label(for="login").login__form-block-title Логин
-    //-               .login__input
-    //-                 svg.login__input-icon
-    //-                   use(xlink:href="sprite.svg#user")
-    //-                 input(id="login" type="text" name="login" placeholder="Terminator_2000").login__input-area
-    //-           .login__form-row
-    //-             .login__form-block
-    //-               label(for="password").login__form-block-title Пароль
-    //-               .login__input
-    //-                 svg.login__input-icon
-    //-                   use(xlink:href="sprite.svg#key")
-    //-                 input(id="password" type="password" name="password" placeholder="***********").login__input-area
-    //-           button(type="button").login__button Отправить
+    .login
+        .login__overlay
+          .login__container
+            form.login__form
+              .close
+              h1.login__title Авторизация
+              .login__form-row
+                .login__form-block
+                  label(for="login").login__form-block-title Логин
+                  .login__input
+                    svg.login__input-icon
+                      use(xlink:href="sprite.svg#user")
+                    input(id="login" type="text" name="login" placeholder="Terminator_2000").login__input-area
+              .login__form-row
+                .login__form-block
+                  label(for="password").login__form-block-title Пароль
+                  .login__input
+                    svg.login__input-icon
+                      use(xlink:href="sprite.svg#key")
+                    input(id="password" type="password" name="password" placeholder="***********").login__input-area
+              button(type="button").login__button Отправить
 
     header.header
       .container.header__container
@@ -196,6 +196,7 @@
                   .load-window
                     .load-window__text Перетащите или загрузите для загрузки изображения
                     button.load-btn(type="button") Загрузить
+                  button.change-preview-btn(type='button') Изменить превью
                 ul.works-edit-list
                   li.works-edit-list__item Название
                     label(for='name')

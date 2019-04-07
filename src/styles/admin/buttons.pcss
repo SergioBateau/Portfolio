@@ -18,6 +18,9 @@
   align-items: center;
   padding-right: 5%;
   padding-bottom: 5%;
+  @include tablets {
+    justify-content: center;
+  }
 }
 .cancel__btn {
   color: #383bcf;
@@ -39,4 +42,19 @@ button.load-btn {
   border-radius: 15px;
   text-transform: uppercase;
   font-weight: 700;
+  @include tablets {
+    display: none;
+  }
+}
+.change-preview-btn {
+  display: none;
+  @include tablets {
+    display: flex;
+    color: blue;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 600;
+  }
 }

@@ -9,6 +9,17 @@
   display: flex;
   width: 100%;
   padding: 0 5%;
+  @include phones {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+.reviews-edit__form {
+    width: 100%;
+    padding-right: 15%;
+    @include tablets {
+        padding-right: 0;
+    }
 }
 .reviews-edit__photo {
     display: flex;
@@ -16,6 +27,9 @@
     align-items: center;
     justify-content: flex-start;
     margin-right: 30px;
+    @include phones {
+        margin-bottom: 30px;
+    }
 }
 .reviews-edit__pic {
     width: 200px;
@@ -36,20 +50,34 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    width: 100%;
+    @include tablets {
+        flex-direction: column;
+    }
 
 }
 .reviews-edit__autor,
 .reviews-edit__post {
     border-bottom: 1px solid black;
     width: 50%;
+    @include tablets {
+        width: 70%;
+        margin-bottom: 30px;
+    }
 }
 .reviews-edit__autor {
     margin-right: 30px;
+    @include tablets {
+        margin-right: 0;
+    }
+}
+.reviews-edit__review {
+    width: 100%;
 }
 .reviews-edit__textarea {
     margin-top: 30px;
-    width: 610px;
-    height: 70px;
+    /* min-width: 510px; */
+    min-height: 170px;
     color: #414c63;
     border: 1px solid black;
     padding: 10px 10px;
@@ -57,5 +85,8 @@
     &::-webkit-input-placeholder {
         color: #414c63;
         opacity: 1;
-  }
+    }
+    @include tablets {
+        width: 80%;
+    }
 }
