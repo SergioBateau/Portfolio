@@ -13,43 +13,36 @@
 .about__data {
     width: 100%;
     padding: 0 10% 0 10%;
-    display: flex;
-    border: 1px solid red;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
     @include desktop {
         padding: 0;
     }
-    @include phones {
-        flex-flow: column nowrap;
-    }
-}
 
-.about-me {
-    display: flex;
-    border: 1px solid green;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    @include desktop {
-        /* width: 36%; */
-    }
     @include tablets {
-        /* width: 46%; */
-        justify-content: space-between;
-    }
-    @include phones {
-        width: 100%;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 30px;
     }
 
+    @include phones {
+        grid-template-columns: 1fr;
+    }
 }
+
 
 .about-me__photo {
     display: inline-block;
     width: 200px;
     height: 200px;
     overflow: hidden;
+
+    @include phones {
+        margin: 0 auto;
+    }
 }
 
 .photo-pic {
@@ -62,8 +55,9 @@
 
     @include phones {
         display: flex;
-        margin-top: 20px;
-        justify-content: flex-start;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin: 0 auto;
     }
 
 }
@@ -80,30 +74,10 @@ tr {
     }
 }
 
-.about-content {
-    @include desktop {
-        /* margin-left: 55px; */
-    }
-    @include tablets {
-        /* margin-left: 35px; */
-                justify-content: space-between;
-    }
-    @include phones {
-        width: 100%;
-        margin-left: 0;
-    }
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    color: white;
-    border: 1px solid green;
-    justify-content: space-around;
-}
-
 .about-me__desc {
     display: flex;
     flex-direction: column;
-    width: 60%;
+
 }
 
 .about-me__hello {
@@ -123,14 +97,8 @@ tr {
 
 .about-me__ido {
     opacity: .5;
-    margin-bottom: 50px;
     line-height: 1.9;
-    @include tablets {
-        /* margin-bottom: 50px; */
-    }
-    @include phones {
-        margin-bottom: 30px;
-    }
+
 }
 
 .about-content__quote {
@@ -140,7 +108,7 @@ tr {
     font-style: italic;
     opacity: .5;
     line-height: 1.9;
-    width: 60%;
+
     &:before {
         position: absolute;
         left: -7%;
