@@ -9,3 +9,10 @@ import "./scripts/hamburger-menu";
 import "./scripts/reviews";
 import "./scripts/scroll-to";
 import "./scripts/works";
+import Validate from "./scripts/validate";
+
+const validate = new Validate ({
+  element: '#form'
+});
+
+validate.init();

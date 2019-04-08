@@ -9,6 +9,7 @@ html {
     font-size: 14px;
   }
 }
+
 body,
 html {
   height: 100%;
@@ -44,12 +45,6 @@ body {
   min-height: 970px;
 }
 
-button {
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -69,22 +64,27 @@ h6 {
   font-weight: normal;
   margin: 0;
 }
+
 h2 {
     font-size: 36px;
     font-weight: 700;
 }
+
 h3 {
   font-size: 24px;
   font-weight: 700;
 }
+
 p {
   margin: 0;
   padding: 0;
 }
 
-button[type="button"] {
+button {
   background-color: transparent;
   cursor: pointer;
+  border: 0;
+  padding: 0;
 }
 
 a {
@@ -104,12 +104,15 @@ img {
   object-fit: cover;
   object-position: center;
 }
+
 textarea::placeholder { 
   color: white; 
   width: 70%;
   overflow: hidden;
 }
+
 textarea {
   overflow: hidden;
 }
+
 input::placeholder { color: white; }
