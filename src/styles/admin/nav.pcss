@@ -1,34 +1,38 @@
 .menu {
   background: #fff;
 }
+
 .menu-list {
   list-style-type: none;
   display: grid;
   grid-template-columns: .1fr .1fr .1fr;
   grid-template-rows: 1fr;
+
   @include tablets {
     grid-template-columns: .2fr .2fr .2fr;
   }
+
   @include phones {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
 }
+
 .menu-list__item {
   border-bottom: 3px solid transparent;
   text-align: center;
   transition: border-color .3s;
-
-  &_active, &:hover {
+  &_active,
+  &::hover {
     border-color: #383bcf;
     transition: border-color .3s;
     .menu-list__link {
-    color:  #383bcf;
-    transition: color .3s;
-    font-weight: 600;
+      color: #383bcf;
+      transition: color .3s;
+      font-weight: 600;
     }
   }
 }
+
 .menu-list__link {
   display: inline-block;
   text-decoration: none;

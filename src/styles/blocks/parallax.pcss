@@ -1,64 +1,65 @@
 .parallax {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    @include tablets {
-        display: none;
-    }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    will-change: transform;  
-    &:nth-child(1) {
-        .parallax__image {
-            top: 0;
-            right: 0;           
-        }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: transform;
+  &:nth-child(1) {
+    .parallax__image {
+      top: 0;
+      right: 0;
     }
-    &:nth-child(2) {
-        .parallax__image {
-            top: 394PX;
-            right: 0;
-        }
-    }   
-    &:nth-child(3) {
-        z-index: 110;
-        .parallax__image {
-            top: 530PX;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+  }
+  &:nth-child(2) {
+    .parallax__image {
+      top: 394PX;
+      right: 0;
     }
-    &:nth-child(4) {
-        z-index: 130;
-        .parallax__image {
-           bottom: 0;
-           right: 0;
-        }
+  }
+  &:nth-child(3) {
+    z-index: 110;
+    .parallax__image {
+      top: 530PX;
+      left: 50%;
+      transform: translateX(-50%);
     }
-    &:nth-child(5) {
-        z-index: 130;
-        .parallax__image {
-            bottom: 0;
-        }
+  }
+  &:nth-child(4) {
+    z-index: 130;
+    .parallax__image {
+      bottom: 0;
+      right: 0;
     }
-    &:nth-child(6) {
-        z-index: 130;
-        .parallax__image {
-            bottom: 0;
-        }
+  }
+  &:nth-child(5) {
+    z-index: 130;
+    .parallax__image {
+      bottom: 0;
     }
+  }
+  &:nth-child(6) {
+    z-index: 130;
+    .parallax__image {
+      bottom: 0;
+    }
+  }
 }
 
 .parallax__image {
-    min-width: 1920px;
-    position: absolute;
-    width: 100%;
+  min-width: 1920px;
+  position: absolute;
+  width: 100%;
 }

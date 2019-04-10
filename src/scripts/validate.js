@@ -32,10 +32,6 @@ class Valid {
         this.$form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // const xhr = new XMLHttpRequest;
-            // xhr.open('GET');
-            // xhr.send();
-
 
             const isValidEmail = event.target.checkValidity();
             const emailStr = '^[-._a-zA-Za-яA-я0-9]{2,}@(?:[a-zA-Za-яА-Я0-9][-a-z-A-Z-a-я-А-Я0-9]+\\.)+[a-za-я]{2,6}$';

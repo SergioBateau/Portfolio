@@ -1,25 +1,29 @@
 .works-edit__container {
-  box-shadow: 4px 3px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 4px 3px 20px rgba(0, 0, 0, .07);
 }
+
 .works-edit__title {
   margin-left: 5%;
 }
+
 .works-edit__window {
   display: flex;
   width: 100%;
   padding: 0 5%;
+
   @include tablets {
     flex-direction: column;
   }
 }
+
 .load {
   width: 50%;
   padding: 0 50px 0 0;
+
   @include tablets {
     width: 100%;
     margin-bottom: 30px;
   }
-  
 }
 
 .load-window {
@@ -32,11 +36,13 @@
   align-items: center;
   padding: 50px 120px;
   text-align: center;
+
   @include tablets {
     border: none;
     background: url("~images/content/bg/preview_small_1.jpg") center center/ contain no-repeat;
     height: 260px;
   }
+
   @include phones {
     height: 158px;
   }
@@ -44,6 +50,7 @@
 
 .works-edit-list {
   width: 50%;
+
   @include tablets {
     width: 100%;
   }
@@ -51,13 +58,13 @@
 
 .load-window__text {
   opacity: .5;
+
   @include tablets {
     display: none;
   }
 }
 
 .works-edit-list__item {
-  
   width: 100%;
   margin-bottom: 50px;
   &:nth-child(1),
@@ -66,6 +73,7 @@
     border-bottom: 1px solid black;
   }
 }
+
 .input-data {
   display: block;
   padding: 15px 0;
@@ -75,6 +83,7 @@
   opacity: 1;
   color: #414c63;
 }
+
 .works-edit-list__desc {
   margin-top: 30px;
   height: 145px;
@@ -87,10 +96,11 @@
     opacity: 1;
   }
 }
+
 .works-edit-list__skill {
   display: flex;
-
 }
+
 .works-edit-list__some {
   display: flex;
   align-items: flex-end;
@@ -102,9 +112,11 @@
   opacity: .7;
   height: 40px;
 }
+
 .skill__btn {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
+
 .skill__icon {
   fill: black;
 }

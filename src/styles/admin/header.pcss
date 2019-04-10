@@ -1,23 +1,26 @@
 .header {
-    background-image: linear-gradient(to right, #3e3e59 0%, #454573 100%);
+  background-image: linear-gradient(to right, #3e3e59 0%, #454573 100%);
 }
 
 .header__container {
-    padding: 10px 0;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 80px;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 80px;
 }
+
 .header__col-grid {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr 1fr 2fr;
-    align-items: center;
-    @include tablets{
-      grid-template-columns: 0.2fr 1fr 1fr 1fr;
-    }
-    @include phones{
-      grid-template-columns: 0.2fr 1fr 1fr;
-    }
+  display: grid;
+  grid-template-columns: .2fr 1fr 1fr 2fr;
+  align-items: center;
+
+  @include tablets {
+    grid-template-columns: .2fr 1fr 1fr 1fr;
+  }
+
+  @include phones {
+    grid-template-columns: .2fr 1fr 1fr;
+  }
 }
 
 .header__photo {
@@ -39,6 +42,7 @@
 .header__title {
   color: rgba(#fff, .5);
   font-size: 14px;
+
   @include phones {
     display: none;
   }
@@ -46,7 +50,7 @@
 
 .header__exit {
   text-decoration: underline;
-  color:rgba(#fff, .7);
+  color: rgba(#fff, .7);
   font-family: "Open Sans";
   font-size: 14px;
   cursor: pointer;
