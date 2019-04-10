@@ -3,5 +3,41 @@ mixin icon(name, className)
   svg(class=className viewBox=icon.viewBox preserveAspectRatio="none")
     use(xlink:href=icon.url)
 
-mixin image(path, className)
-  img(src=require(`images/${path}`) class=className)
+
+mixin image(path, className, description, attrRole)
+  if role
+    img(src=require(`images/${path}`) class=className alt=description role= attrRole)
+  else
+    img(src=require(`images/${path}`) class=className alt=description)
+
+mixin menu(mod, idMod)
+  div(class='menu menu--' + mod, id="scroll--" + idMod)
+    ul.menu-list
+      li#nav__item.menu-list__item
+        a.menu-list__link(href='#hero' v-scroll-to="'#hero'") Главная
+      li#nav__item.menu-list__item
+        a.menu-list__link(href='#about' v-scroll-to="'#about'") Обо мне
+      li#nav__item.menu-list__item
+        a.menu-list__link(href='#skills' v-scroll-to="'#skills'") Навыки
+      li#nav__item.menu-list__item
+        a.menu-list__link(href='#my-work' v-scroll-to="'#my-work'") Работы
+      li#nav__item.menu-list__item
+        a.menu-list__link(href='#review' v-scroll-to="'#review'") Отзывы
+      li#nav__item.menu-list__item
+        a.menu-list__link(href='#form' v-scroll-to="'#form'") Связаться
+
+mixin soc(mod)
+  div(class='soc soc--' + mod)
+    ul.soc-list
+      li.soc-list__item
+        a.soc-list__link(href='https://www.instagram.com/sergiobateau/')
+          +icon('insta','soc-icon')
+      li.soc-list__item
+        a.soc-list__link(href='https://vk.com/sergiobateau')
+          +icon('vk','soc-icon')
+      li.soc-list__item
+        a.soc-list__link(href='https://github.com/SergioBateau')
+          +icon('github','soc-icon')
+
+mixin close(mod)
+  a(class='close close--' + mod, href='#')

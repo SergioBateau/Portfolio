@@ -1,0 +1,70 @@
+.add-list__btns {
+  padding: 0 5% 5% 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-list__btn-edit,
+.add-list__btn-delete {
+  font-weight: 600;
+  color: #414c63;
+  opacity: .7;
+}
+
+.add-list__icon {
+  margin-left: 10px;
+}
+
+.edit__btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+  padding-bottom: 5%;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.cancel__btn {
+  color: #383bcf;
+  font-weight: 600;
+}
+
+.save__btn {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #1d51dd;
+  padding: 20px 50px;
+  border-radius: 20px;
+  margin-left: 50px;
+}
+
+.load-btn {
+  color: white;
+  background-color: #1d51dd;
+  padding: 15px 50px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.change-preview-btn {
+  display: none;
+  
+  @include tablets {
+    display: flex;
+    color: blue;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 600;
+  }
+}

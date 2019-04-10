@@ -1,0 +1,155 @@
+footer {
+  min-height: 370PX;
+  background: #1b1f22;
+  display: flex;
+
+  @include tablets {
+    min-height: 480PX;
+  }
+
+  @include phones {
+    min-height: 740PX;
+  }
+}
+
+.footer__col {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 80px;
+
+  @include phones {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+
+.footer-copyright {
+  width: 35%;
+  display: flex;
+
+  @include desktop {
+    flex-direction: column;
+    width: 25%;
+    margin-right: 20px;
+  }
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-data {
+  width: 30%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include desktop {
+    width: 80%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.footer-content {
+  width: 65%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include  desktop {
+    width: 75%;
+  }
+}
+
+.footer-copyright__year {
+  font-size: 48px;
+  font-weight: 600;
+  opacity: .1;
+  margin-right: 60px;
+
+  @include desktop {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+.footer-data__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer-data__content {
+  font-weight: 400;
+  opacity: .15;
+  line-height: 2;
+}
+
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+
+  @include tablets {
+    margin-bottom: 0;
+  }
+
+}
+
+.footer-desc {
+  display: flex;
+  width: 100%;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.footer-desc__col {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.footer-desc__part {
+  display: flex;
+  width: 50%;
+  flex-flow: column nowrap;
+  margin-right: 5%;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.footer-desc__author {
+  font-style: italic;
+  opacity: 1;
+}
+
+.footer-desc__loftschool {
+  margin-bottom: 30px;
+  opacity: .3;
+}
+
+.footer-desc__text {
+  margin-bottom: 30px;
+  opacity: .3;
+}
+

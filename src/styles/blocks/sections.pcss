@@ -1,0 +1,81 @@
+.hero-section {
+  min-height: 1770PX;
+  position: relative;
+  overflow: hidden;
+
+  @include tablets {
+    background: url("~images/content/bg/first_bg.jpg") center center no-repeat / cover;
+    min-height: auto;
+  }
+}
+
+.about-section {
+  min-height: 650PX;
+  display: flex;
+  background: url("~images/content/bg/second_bg.jpg") center center no-repeat / cover;
+}
+
+.skills-section {
+  position: relative;
+  min-height: 1020PX;
+  display: flex;
+  background: url("~images/content/bg/third_bg.jpg") center center no-repeat / cover;
+
+  @include phones {
+    overflow: hidden;
+  }
+  .skills-bg {
+    position: absolute;
+    width: 664px;
+    bottom: -10%;
+
+    @include desktop {
+      width: 395px;
+      left: -75px;
+    }
+
+    @include tablets {
+      transform: rotate(-90deg) translateY(-30%);
+      width: 487px;
+      left: 50%;
+    }
+
+    @include phones {
+      width: 320px;
+      bottom: -80px;
+    }
+  }
+}
+
+.my-work-section {
+  min-height: 1085PX;
+  display: flex;
+  background: #fff;
+}
+
+.reviews-section {
+  position: relative;
+  min-height: 1375PX;
+  display: flex;
+  background: url("~images/content/bg/five_bg.jpg") center center no-repeat / cover;
+  .leave-bg {
+    position: absolute;
+    right: 0;
+    top: -12%;
+    height: 442PX;
+
+    @include desktop {
+      right: -15%;
+    }
+
+    @include tablets {
+      height: 330PX;
+      top: -10%;
+      right: -25%;
+    }
+    
+    @include phones {
+      display: none;
+    }
+  }
+}

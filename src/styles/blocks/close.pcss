@@ -1,0 +1,30 @@
+.close {
+  background: #414c63;
+  height: 30px;
+  position: relative;
+  width: 6px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  position: absolute;
+  right: 35px;
+  top: 60px;
+
+  @include phones {
+    right: 40px;
+  }
+  &::after {
+    background: #414c63;
+    content: "";
+    height: 6px;
+    left: -12px;
+    position: absolute;
+    top: 12px;
+    width: 30px;
+    border-radius: 2px;
+      
+  }
+}
+
+.close--login {
+  top: 80px;
+}

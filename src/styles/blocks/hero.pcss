@@ -1,0 +1,87 @@
+.hero {
+  width: 100%;
+  display: flex;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablets {
+    justify-content: flex-start;
+  }
+}
+
+.hero__content {
+  display: flex;
+  margin-top: 80px;
+  z-index: 100;
+
+  @include desktopHd {
+    margin-top: 50px;
+  }
+
+  @include desktop {
+    margin-top: 120px;
+  }
+
+  @include tablets {
+    margin-top: 180px;
+  }
+
+  @include phones {
+    margin-top: 100px;
+  }
+}
+
+.hero__col {
+  display: flex;
+  justify-content: center;
+  padding: 0 150px 0 50px;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.hero__text {
+  width: 22%;
+  text-align: right;
+  margin-right: 60px;
+  font-size: 18px;
+  opacity: .4;
+  line-height: 1.9;
+
+  @include tablets {
+    text-align: center;
+    width: 35%;
+    margin-right: 0;
+    font-size: 16px;
+  }
+}
+
+.hero__name {
+  width: 60%;
+  text-align: left;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+
+  @include tablets {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 48px;
+  }
+  
+  @include phones {
+    font-size: 36px;
+  }
+}
+
+
+
+

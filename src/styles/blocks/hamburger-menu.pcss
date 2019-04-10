@@ -1,0 +1,21 @@
+.hamburger-menu {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  z-index: 200;
+
+  @include tablets {
+    left: 50%;
+  }
+
+  @include phones {
+    left: 0;
+  }
+}
